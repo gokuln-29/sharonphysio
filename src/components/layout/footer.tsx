@@ -10,7 +10,7 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-4 mb-6">
               <div className="w-20 h-20 rounded-full overflow-hidden shadow-lg flex items-center justify-center bg-white transition-transform hover:scale-105">
-                <img src="/logo.jpg" alt="Sharon Physiotherapy Logo" className="w-full h-full object-cover" />
+                <img src="/Logo.webp" alt="Sharon Physiotherapy Logo" className="w-full h-full object-cover" />
               </div>
               <div>
                 <span className="font-heading font-bold text-xl leading-tight block">Sharon Physiotherapy</span>

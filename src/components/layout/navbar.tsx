@@ -31,7 +31,7 @@ export function Navbar() {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 group">
             <div className="w-16 h-16 rounded-full overflow-hidden shadow-md flex items-center justify-center bg-white transition-transform group-hover:scale-105">
-              <img src="/logo.jpg" alt="Sharon Physiotherapy Logo" className="w-full h-full object-cover" />
+              <img src="/Logo.webp" alt="Sharon Physiotherapy Logo" className="w-full h-full object-cover" />
             </div>
             <div className="hidden sm:block">
               <span className="font-heading font-bold text-xl text-navy-900 leading-tight block">
