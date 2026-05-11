@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ExternalLink } from "lucide-react";
 import { siteConfig } from "@/lib/utils";
 
 export function GoogleMap() {
@@ -36,6 +37,17 @@ export function GoogleMap() {
             referrerPolicy="no-referrer-when-downgrade"
             title="Sharon Physiotherapy Location"
           ></iframe>
+        </div>
+        <div className="text-center mt-6">
+          <a
+            href={siteConfig.googleMaps}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+          >
+            View on Google Maps & read reviews
+            <ExternalLink className="w-4 h-4" />
+          </a>
         </div>
       </div>
     </section>

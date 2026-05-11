@@ -7,9 +7,67 @@ import { CTASection } from "@/components/home/cta";
 import { GoogleMap } from "@/components/home/google-map";
 import { BeforeAfter } from "@/components/home/before-after";
 import { BlogSection } from "@/components/home/blog";
-import { siteConfig } from "@/lib/utils";
+import { faqs, siteConfig } from "@/lib/utils";
 
 export default function HomePage() {
+  const businessJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "@id": `${siteConfig.url}/#clinic`,
+    name: siteConfig.name,
+    description: siteConfig.description,
+    url: siteConfig.url,
+    telephone: siteConfig.phone,
+    email: siteConfig.email,
+    image: `${siteConfig.url}/og-image.jpg`,
+    logo: `${siteConfig.url}/Logo.webp`,
+    foundingDate: String(siteConfig.founded),
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: siteConfig.addressLine,
+      addressLocality: siteConfig.locality,
+      addressRegion: siteConfig.region,
+      postalCode: siteConfig.postalCode,
+      addressCountry: siteConfig.country,
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: siteConfig.location.lat,
+      longitude: siteConfig.location.lng,
+    },
+    openingHoursSpecification: siteConfig.openingHours.map((slot) => ({
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: slot.days,
+      opens: slot.opens,
+      closes: slot.closes,
+    })),
+    medicalSpecialty: [
+      "Physiotherapy",
+      "Neurological Rehabilitation",
+      "Orthopedic Rehabilitation",
+      "Sports Medicine",
+    ],
+    priceRange: "₹₹",
+    sameAs: [siteConfig.facebook, siteConfig.instagram, siteConfig.googleMaps],
+    physician: {
+      "@type": "Physician",
+      name: "Dr. T. Stella Thangam",
+      medicalSpecialty: ["Physiotherapy", "NeurologicalExam"],
+      jobTitle: "Chief Physiotherapist",
+      url: `${siteConfig.url}/doctor`,
+    },
+  };
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+  };
+
   return (
     <>
       <Hero />
@@ -21,54 +79,14 @@ export default function HomePage() {
       <BlogSection />
       <GoogleMap />
       <CTASection />
-      
+
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
-            "name": "Sharon Physiotherapy & Rehabilitation Center",
-            "description": "Premium physiotherapy clinic in Madurai specializing in neurological and orthopedic rehabilitation.",
-            "url": siteConfig.url,
-            "telephone": siteConfig.phone,
-            "email": siteConfig.email,
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "123 Temple Road, Near Vishalakshi Temple",
-              "addressLocality": "Madurai",
-              "addressRegion": "Tamil Nadu",
-              "postalCode": "625001",
-              "addressCountry": "IN",
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": siteConfig.location.lat,
-              "longitude": siteConfig.location.lng,
-            },
-            "openingHoursSpecification": [
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-                "opens": "09:00",
-                "closes": "20:00",
-              },
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": "Sunday",
-                "opens": "10:00",
-                "closes": "14:00",
-              },
-            ],
-            "medicalSpecialty": [
-              "Physiotherapy",
-              "Neurological Rehabilitation",
-              "Orthopedic Rehabilitation",
-              "Sports Medicine",
-            ],
-            "priceRange": "$$",
-          }),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(businessJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
     </>
   );

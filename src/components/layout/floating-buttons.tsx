@@ -1,33 +1,34 @@
 "use client";
 
-import { MessageCircle, X } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import { siteConfig } from "@/lib/utils";
-import { useState } from "react";
+
+const WHATSAPP_PREFILL = encodeURIComponent(
+  "Hello Sharon Physiotherapy! I'd like to book an appointment.\n\n" +
+    "Name: \n" +
+    "Condition / treatment: \n" +
+    "Preferred day: \n" +
+    "Preferred time: ",
+);
 
 export function WhatsAppButton() {
-  const [isVisible, setIsVisible] = useState(true);
-
   return (
-    <>
-      {isVisible && (
-        <motion.a
-          href={`https://wa.me/${siteConfig.whatsapp}?text=Hello, I would like to book an appointment at Sharon Physiotherapy`}
-          target="_blank"
-          rel="noopener noreferrer"
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors group"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          <MessageCircle className="w-7 h-7 text-white" />
-          <span className="absolute right-full mr-3 px-4 py-2 bg-white rounded-lg shadow-lg text-sm font-medium text-gray-800 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-            Chat with us!
-          </span>
-        </motion.a>
-      )}
-    </>
+    <motion.a
+      href={`https://wa.me/${siteConfig.whatsapp}?text=${WHATSAPP_PREFILL}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors group"
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+    >
+      <MessageCircle className="w-7 h-7 text-white" />
+      <span className="absolute right-full mr-3 px-4 py-2 bg-white rounded-lg shadow-lg text-sm font-medium text-gray-800 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+        Chat with us!
+      </span>
+    </motion.a>
   );
 }
 

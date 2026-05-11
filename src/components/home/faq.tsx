@@ -9,7 +9,7 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-24 bg-gradient-to-b from-teal-50 to-white">
+    <section className="py-24 bg-linear-to-b from-teal-50 to-white">
       <div className="container mx-auto px-4 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -45,7 +45,7 @@ export function FAQ() {
               >
                 <div className="flex items-center justify-between gap-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-teal-100 flex items-center justify-center flex-shrink-0 group-hover:bg-teal-600 transition-colors">
+                    <div className="w-10 h-10 rounded-xl bg-teal-100 flex items-center justify-center shrink-0 group-hover:bg-teal-600 transition-colors">
                       <HelpCircle className="w-5 h-5 text-teal-600 group-hover:text-white transition-colors" />
                     </div>
                     <span className="font-semibold text-navy-900 group-hover:text-primary transition-colors">
@@ -53,9 +53,8 @@ export function FAQ() {
                     </span>
                   </div>
                   <ChevronDown
-                    className={`w-5 h-5 text-navy-400 transition-transform duration-300 ${
-                      openIndex === index ? "rotate-180" : ""
-                    }`}
+                    className={`w-5 h-5 text-navy-400 transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""
+                      }`}
                   />
                 </div>
                 <AnimatePresence>

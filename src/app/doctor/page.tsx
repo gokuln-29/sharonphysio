@@ -4,8 +4,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CTASection } from "@/components/home/cta";
 
 export const metadata: Metadata = {
-  title: "Our Doctor",
-  description: "Meet Dr. T. Stella Thangam - Chief Physiotherapist at Sharon Physiotherapy, Madurai. Expert in neurological and orthopedic rehabilitation with 15+ years of experience.",
+  title: "Dr. T. Stella Thangam — Chief Physiotherapist",
+  description: "Dr. T. Stella Thangam, MPT (Neurology), is the chief physiotherapist at Sharon Physiotherapy Madurai with 14+ years of clinical experience in stroke, CP and ortho rehab.",
+  alternates: { canonical: "/doctor" },
+  openGraph: {
+    title: "Dr. T. Stella Thangam | Sharon Physiotherapy Madurai",
+    description: "Meet Dr. Stella, MPT (Neurology), Madurai's specialist in stroke and orthopedic rehabilitation.",
+    url: "/doctor",
+  },
 };
 
 const qualifications = [
@@ -37,7 +43,7 @@ const achievements = [
   { number: "8000+", label: "Patients Treated" },
   { number: "14+", label: "Years Experience" },
   { number: "15+", label: "Specialized Services" },
-  { number: "100%", label: "Patient Care" },
+  { number: "MPT", label: "Neurology Specialist" },
 ];
 
 const approach = [

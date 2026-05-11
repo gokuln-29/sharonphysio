@@ -1,15 +1,12 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, Star } from "lucide-react";
+import { motion } from "framer-motion";
+import { Star, ExternalLink } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { testimonials } from "@/lib/utils";
+import { siteConfig, testimonials } from "@/lib/utils";
 
 export function Testimonials() {
-  const [activeIndex, setActiveIndex] = useState(0);
-
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
@@ -74,9 +71,12 @@ export function Testimonials() {
           transition={{ delay: 0.3 }}
           className="text-center mt-12"
         >
-          <Button variant="outline" size="lg">
-            Read More Reviews
-          </Button>
+          <a href={siteConfig.googleReviewsUrl} target="_blank" rel="noopener noreferrer">
+            <Button variant="outline" size="lg" className="gap-2">
+              Read more reviews on Google
+              <ExternalLink className="w-4 h-4" />
+            </Button>
+          </a>
         </motion.div>
       </div>
     </section>

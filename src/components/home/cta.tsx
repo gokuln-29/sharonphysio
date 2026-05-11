@@ -47,15 +47,15 @@ export function CTASection() {
 
             <div className="grid sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
               <div className="flex items-center gap-3 text-white/80">
-                <MapPin className="w-5 h-5 text-teal-400 flex-shrink-0" />
+                <MapPin className="w-5 h-5 text-teal-400 shrink-0" />
                 <span className="text-sm">Madurai, Tamil Nadu</span>
               </div>
               <div className="flex items-center gap-3 text-white/80">
-                <Clock className="w-5 h-5 text-teal-400 flex-shrink-0" />
-                <span className="text-sm">Mon-Sat, 9AM - 8PM</span>
+                <Clock className="w-5 h-5 text-teal-400 shrink-0" />
+                <span className="text-sm">Mon-Sat, 5:30PM - 8PM</span>
               </div>
               <div className="flex items-center gap-3 text-white/80">
-                <Phone className="w-5 h-5 text-teal-400 flex-shrink-0" />
+                <Phone className="w-5 h-5 text-teal-400 shrink-0" />
                 <span className="text-sm">{siteConfig.phone}</span>
               </div>
             </div>

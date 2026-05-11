@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Outfit } from "next/font/google";
+import { Inter, Outfit, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
@@ -16,7 +16,13 @@ const outfit = Outfit({
   variable: "--font-outfit",
 });
 
+const playfair = Playfair_Display({ 
+  subsets: ["latin"],
+  variable: "--font-playfair",
+});
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
   title: {
     default: "Sharon Physiotherapy & Rehabilitation Center | Best Physio in Madurai",
     template: "%s | Sharon Physiotherapy Madurai",
@@ -24,10 +30,13 @@ export const metadata: Metadata = {
   description: "Premium physiotherapy clinic in Madurai specializing in neurological and orthopedic rehabilitation. Expert care for stroke, sports injuries, joint pain, and more.",
   keywords: ["physiotherapy Madurai", "rehabilitation center Madurai", "stroke rehabilitation", "sports injury physiotherapy", "orthopedic physiotherapy", "best physiotherapist Madurai"],
   authors: [{ name: "Sharon Physiotherapy" }],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: siteConfig.url,
+    url: "/",
     siteName: "Sharon Physiotherapy",
     title: "Sharon Physiotherapy & Rehabilitation Center | Madurai",
     description: "Premium physiotherapy clinic in Madurai specializing in neurological and orthopedic rehabilitation.",
@@ -58,10 +67,16 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      {
+        url: "/favicon.ico",
+        href: "/favicon.ico",
+      },
+    ],
     apple: "/favicon.ico",
   },
 };
+
 
 
 
@@ -71,7 +86,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
+    <html lang="en" data-scroll-behavior="smooth" className={`${inter.variable} ${outfit.variable} ${playfair.variable}`}>
       <body className="min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-1">{children}</main>

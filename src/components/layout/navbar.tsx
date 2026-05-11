@@ -34,10 +34,10 @@ export function Navbar() {
               <img src="/Logo.webp" alt="Sharon Physiotherapy Logo" className="w-full h-full object-cover" />
             </div>
             <div className="hidden sm:block">
-              <span className="font-heading font-bold text-xl text-navy-900 leading-tight block">
+              <span className="font-brand font-bold text-xl text-navy-900 leading-tight block tracking-wide">
                 Sharon Physiotherapy
               </span>
-              <span className="block text-sm text-teal-700 font-medium">
+              <span className="block text-sm text-teal-700 font-medium italic tracking-wider">
                 & Rehabilitation Center
               </span>
             </div>

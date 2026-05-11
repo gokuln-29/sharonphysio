@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { blogPosts } from "@/lib/utils";
 import Link from "next/link";
 
@@ -28,7 +29,7 @@ export function BlogSection() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 mb-10">
           {blogPosts.map((post, index) => (
             <motion.div
               key={post.title}
@@ -60,6 +61,11 @@ export function BlogSection() {
               </Card>
             </motion.div>
           ))}
+        </div>
+        <div className="text-center">
+          <Link href="/blog">
+            <Button variant="outline" size="lg">View all articles</Button>
+          </Link>
         </div>
       </div>
     </section>

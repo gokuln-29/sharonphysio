@@ -4,8 +4,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CTASection } from "@/components/home/cta";
 
 export const metadata: Metadata = {
-  title: "Gallery",
-  description: "Take a virtual tour of Sharon Physiotherapy & Rehabilitation Center. See our state-of-the-art equipment, comfortable treatment rooms, and rehabilitation facilities.",
+  title: "Clinic Gallery & Facilities",
+  description: "A look inside Sharon Physiotherapy Madurai — modern treatment rooms, electrotherapy and rehab equipment, accessible patient areas, and the team that runs it all.",
+  alternates: { canonical: "/gallery" },
+  openGraph: {
+    title: "Clinic Gallery — Sharon Physiotherapy Madurai",
+    description: "Explore our treatment rooms, rehab equipment and patient areas.",
+    url: "/gallery",
+  },
 };
 
 const galleryItems = [

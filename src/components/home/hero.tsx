@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 const stats = [
   { value: "14+", label: "Years Experience" },
   { value: "8000+", label: "Patients Treated" },
-  { value: "100%", label: "Patient Care" },
+  { value: "Mon–Sat", label: "Open Evenings" },
 ];
 
 const features = [

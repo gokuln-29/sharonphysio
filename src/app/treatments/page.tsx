@@ -5,7 +5,13 @@ import { CTASection } from "@/components/home/cta";
 
 export const metadata: Metadata = {
   title: "Treatments",
-  description: "Explore our comprehensive range of physiotherapy treatments including stroke rehabilitation, sports injury treatment, joint replacement recovery, and more in Madurai.",
+  description: "Stroke rehab, sports injury recovery, cerebral palsy management, back/neck pain, women's fitness, manual therapy, dry needling and more — evidence-based physio in Madurai.",
+  alternates: { canonical: "/treatments" },
+  openGraph: {
+    title: "Physiotherapy Treatments | Sharon Physiotherapy Madurai",
+    description: "Stroke, sports, CP, back/neck, women's health and manual therapy programs at Madurai's specialist neuro-ortho clinic.",
+    url: "/treatments",
+  },
 };
 
 const treatmentDetails = [

@@ -5,7 +5,13 @@ import { CTASection } from "@/components/home/cta";
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: "Learn about Sharon Physiotherapy & Rehabilitation Center - Madurai's premier physiotherapy clinic with 14+ years of experience in neurological and orthopedic rehabilitation.",
+  description: "Founded in 2009 by Dr. T. Stella Thangam (MPT Neurology), Sharon Physiotherapy has helped 8000+ Madurai patients recover from stroke, injury, and chronic pain.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About Sharon Physiotherapy | Madurai",
+    description: "Founded in 2009 by Dr. T. Stella Thangam, Sharon Physiotherapy has helped 8000+ patients in Madurai.",
+    url: "/about",
+  },
 };
 
 const values = [
@@ -37,6 +43,8 @@ const milestones = [
   { year: "2018", event: "Introduced advanced rehabilitation equipment and technologies" },
   { year: "2022", event: "Milestone of 5000+ successful patient recoveries achieved" },
   { year: "2024", event: "Recognized as one of the top physiotherapy centers in Tamil Nadu" },
+  { year: "2025", event: "Crossed 8000 patients treated and added structured paediatric CP early-intervention programme" },
+  { year: "2026", event: "Launched online appointment booking and expanded blog with patient education resources" },
 ];
 
 export default function AboutPage() {
@@ -94,8 +102,8 @@ export default function AboutPage() {
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full gradient-navy flex items-center justify-center">
                   <Heart className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-heading text-2xl font-bold text-navy-900">100%</h3>
-                <p className="text-sm text-navy-600 mt-1">Patient Satisfaction</p>
+                <h3 className="font-heading text-2xl font-bold text-navy-900">14+</h3>
+                <p className="text-sm text-navy-600 mt-1">Specialised Programmes</p>
               </div>
               <div className="text-center p-6 rounded-2xl bg-teal-50">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full gradient-teal flex items-center justify-center">
