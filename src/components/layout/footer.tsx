@@ -40,22 +40,22 @@ export function Footer() {
           <div>
             <h4 className="font-heading font-semibold text-lg mb-6">Specializations</h4>
             <nav className="space-y-3">
-              <Link href="/treatments#stroke" className="block text-sm text-navy-200 hover:text-teal-400 transition-colors">
+              <Link href="/services#stroke" className="block text-sm text-navy-200 hover:text-teal-400 transition-colors">
                 Stroke Rehabilitation
               </Link>
-              <Link href="/treatments#sports" className="block text-sm text-navy-200 hover:text-teal-400 transition-colors">
+              <Link href="/services#sports" className="block text-sm text-navy-200 hover:text-teal-400 transition-colors">
                 Sports Injury Rehab
               </Link>
-              <Link href="/treatments#cp" className="block text-sm text-navy-200 hover:text-teal-400 transition-colors">
+              <Link href="/services#cp" className="block text-sm text-navy-200 hover:text-teal-400 transition-colors">
                 Cerebral Palsy Management
               </Link>
-              <Link href="/treatments#back" className="block text-sm text-navy-200 hover:text-teal-400 transition-colors">
+              <Link href="/services#back" className="block text-sm text-navy-200 hover:text-teal-400 transition-colors">
                 Back & Neck Pain
               </Link>
-              <Link href="/treatments#women" className="block text-sm text-navy-200 hover:text-teal-400 transition-colors">
+              <Link href="/services#women" className="block text-sm text-navy-200 hover:text-teal-400 transition-colors">
                 Women&apos;s Fitness Care
               </Link>
-              <Link href="/treatments#manual" className="block text-sm text-navy-200 hover:text-teal-400 transition-colors">
+              <Link href="/services#manual" className="block text-sm text-navy-200 hover:text-teal-400 transition-colors">
                 Manual Therapy
               </Link>
             </nav>

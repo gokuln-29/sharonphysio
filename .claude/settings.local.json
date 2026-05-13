@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(Remove-Item -Recurse -Force \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\sharon\\\\sharonphysio\\\\src\\\\app\\\\doctor\")",
+      "Bash(Remove-Item -Recurse -Force \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\sharon\\\\sharonphysio\\\\src\\\\app\\\\gallery\")",
+      "Bash(Write-Output \"Deleted doctor and gallery directories\")",
+      "Read(//c/c/Users/LENOVO/Desktop/sharon/sharonphysio/**)"
     ]
   }
 }

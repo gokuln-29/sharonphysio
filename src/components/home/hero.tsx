@@ -75,9 +75,9 @@ export function Hero() {
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
-              <Link href="/treatments">
+              <Link href="/services">
                 <Button variant="outline" size="lg" className="w-full sm:w-auto">
-                  View Treatments
+                  View Services
                 </Button>
               </Link>
             </div>

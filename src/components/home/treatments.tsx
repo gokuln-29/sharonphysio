@@ -84,9 +84,9 @@ export function Treatments() {
           transition={{ delay: 0.4 }}
           className="text-center mt-12"
         >
-          <Link href="/treatments">
+          <Link href="/services">
             <Button variant="outline" size="lg">
-              View All Treatments
+              View All Services
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
           </Link>

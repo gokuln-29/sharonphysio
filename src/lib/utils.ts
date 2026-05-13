@@ -42,9 +42,7 @@ export const siteConfig = {
 export const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  { name: "Treatments", href: "/treatments" },
-  { name: "Doctor", href: "/doctor" },
-  { name: "Gallery", href: "/gallery" },
+  { name: "Services", href: "/services" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -53,37 +51,37 @@ export const treatments = [
     title: "Stroke Rehabilitation",
     description: "Comprehensive neurorehabilitation program for stroke recovery, focusing on motor function and independence.",
     icon: "Brain",
-    href: "/treatments#stroke",
+    href: "/services#stroke",
   },
   {
     title: "Sports Injury Rehab",
     description: "Expert sports physiotherapy ensuring safe return to sport with customized rehabilitation protocols.",
     icon: "Activity",
-    href: "/treatments#sports",
+    href: "/services#sports",
   },
   {
     title: "Cerebral Palsy Management",
     description: "Specialized pediatric physiotherapy for children with CP to improve motor development and function.",
     icon: "Baby",
-    href: "/treatments#cp",
+    href: "/services#cp",
   },
   {
     title: "Back & Neck Pain",
     description: "Targeted treatment for chronic back pain, herniated discs, and cervical issues.",
     icon: "AlignCenter",
-    href: "/treatments#back",
+    href: "/services#back",
   },
   {
     title: "Women's Fitness Care",
     description: "Specialized physiotherapy for women's health, prenatal, postnatal, and pelvic floor care.",
     icon: "Heart",
-    href: "/treatments#women",
+    href: "/services#women",
   },
   {
     title: "Manual Therapy",
     description: "Hands-on techniques to mobilize joints and soft tissues for pain relief and improved mobility.",
     icon: "Hand",
-    href: "/treatments#manual",
+    href: "/services#manual",
   },
 ];
 

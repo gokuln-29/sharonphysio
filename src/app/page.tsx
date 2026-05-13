@@ -6,7 +6,6 @@ import { FAQ } from "@/components/home/faq";
 import { CTASection } from "@/components/home/cta";
 import { GoogleMap } from "@/components/home/google-map";
 import { BeforeAfter } from "@/components/home/before-after";
-import { BlogSection } from "@/components/home/blog";
 import { faqs, siteConfig } from "@/lib/utils";
 
 export default function HomePage() {
@@ -54,7 +53,7 @@ export default function HomePage() {
       name: "Dr. T. Stella Thangam",
       medicalSpecialty: ["Physiotherapy", "NeurologicalExam"],
       jobTitle: "Chief Physiotherapist",
-      url: `${siteConfig.url}/doctor`,
+      url: `${siteConfig.url}/about`,
     },
   };
 
@@ -76,7 +75,6 @@ export default function HomePage() {
       <BeforeAfter />
       <Testimonials />
       <FAQ />
-      <BlogSection />
       <GoogleMap />
       <CTASection />
 
