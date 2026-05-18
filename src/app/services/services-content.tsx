@@ -51,6 +51,7 @@ const treatmentDetails = [
       "Proprioception training",
       "K-taping",
       "Return-to-sport testing",
+      "Cupping and soft tissue manipulation",
     ],
     duration: "6–12 weeks",
     color: "navy",
@@ -96,10 +97,18 @@ const treatmentDetails = [
     category: "Women's Health",
     description:
       "Specialized physiotherapy for women's health needs, including prenatal, postnatal, and overall physical wellness. We provide a safe, supportive environment for women at every stage of life.",
-    conditions: ["Pelvic floor dysfunction", "Prenatal discomfort", "Postnatal recovery", "Women's fitness"],
+    conditions: [
+      "Pelvic floor dysfunction",
+      "Prenatal discomfort",
+      "Postnatal recovery",
+      "Women's fitness",
+      "PCOD",
+      "Primary dysmenorrhea treatment",
+      "Obesity management"
+    ],
     techniques: [
       "Pelvic floor rehabilitation",
-      "Prenatal yoga & exercises",
+      "Pre & postnatal exercises",
       "Core strengthening",
       "Wellness counseling",
     ],

@@ -8,7 +8,7 @@ const specializations = [
   {
     icon: Brain,
     title: "Neurological Rehabilitation",
-    description: "Expert care for stroke, Parkinson&apos;s, spinal cord injuries, and other neurological conditions using evidence-based techniques.",
+    description: "Expert care for stroke, spinal cord injuries, CP, ADHD, Autism, Dementia, and other neurological conditions using evidence-based techniques.",
     features: ["Neuroplasticity training", "Balance restoration", "Functional movement", "Cognitive rehabilitation"],
   },
   {
@@ -33,7 +33,7 @@ const specializations = [
 
 export function Specializations() {
   return (
-    <section className="py-24 bg-gradient-to-b from-teal-50 to-white">
+    <section className="py-24 bg-linear-to-b from-teal-50 to-white">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
@@ -54,16 +54,16 @@ export function Specializations() {
             
             <div className="space-y-4">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-teal-100 flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-lg bg-teal-100 flex items-center justify-center shrink-0">
                   <Brain className="w-5 h-5 text-teal-600" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-navy-900">Advanced Neurological Expertise</h4>
-                  <p className="text-sm text-navy-600 mt-1">Specialized training in stroke rehab, Parkinson's, and spinal cord injury management.</p>
+                  <p className="text-sm text-navy-600 mt-1">Specialized training in stroke rehab, Parkinson&apos;s, and spinal cord injury management.</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-teal-100 flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-lg bg-teal-100 flex items-center justify-center shrink-0">
                   <Bone className="w-5 h-5 text-teal-600" />
                 </div>
                 <div>
@@ -88,7 +88,7 @@ export function Specializations() {
                   <Card className="overflow-hidden">
                     <CardContent className="p-6">
                       <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-xl gradient-teal flex items-center justify-center flex-shrink-0">
+                        <div className="w-12 h-12 rounded-xl gradient-teal flex items-center justify-center shrink-0">
                           <Icon className="w-6 h-6 text-white" />
                         </div>
                         <div className="flex-1">

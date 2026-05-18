@@ -41,7 +41,7 @@ export function Hero() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-100 text-teal-700 text-sm font-medium mb-6">
               <span className="w-2 h-2 rounded-full bg-teal-500 animate-pulse" />
-              Madurai&apos;s Premier Physiotherapy Center
+              Sharon Physiotherapy and Rehab center
             </div>
             
             <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-navy-900 leading-tight mb-6">

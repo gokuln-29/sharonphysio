@@ -5,14 +5,14 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-const fallbackUrl = "https://sharonphysio.vercel.app";
+const fallbackUrl = "https://sharonphysio.com";
 const resolvedUrl = (process.env.NEXT_PUBLIC_SITE_URL || fallbackUrl).replace(/\/$/, "");
 
 export const siteConfig = {
   name: "Sharon Physiotherapy & Rehabilitation Center",
   description: "Premium physiotherapy clinic in Madurai specializing in neurological and orthopedic rehabilitation",
   url: resolvedUrl,
-  founded: 2009,
+  founded: 2026,
   phone: "+91 82483 05206",
   whatsapp: "918248305206",
   addressLine: "12, Susee Nagar, Dhopas Road",
@@ -27,8 +27,8 @@ export const siteConfig = {
     { days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], opens: "17:30", closes: "20:00" },
   ],
   email: "sharonphysio@gmail.com",
-  instagram: "https://www.instagram.com/sharonphysiotherapy/",
-  facebook: "https://www.facebook.com/sharonphysiotherapy/",
+  instagram: "https://www.instagram.com/sharonphysio/",
+  // facebook: "https://www.facebook.com/sharonphysiotherapy/",
   googleMaps: "https://share.google/KsxGkWyz6xgCMmTun",
   googleReviewsUrl: "https://share.google/KsxGkWyz6xgCMmTun",
   mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.704153093489!2d78.11127127453005!3d9.95850409014502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c700531a3ee1%3A0xb7993490db01c3b4!2sSHARON%20PHYSIOTHERAPY!5e0!3m2!1sen!2sin!4v1715356000000!5m2!1sen!2sin",

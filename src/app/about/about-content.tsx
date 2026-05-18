@@ -134,18 +134,18 @@ const facilityHighlights = [
 ];
 
 const milestones = [
-  { year: "2009", event: "Clinic founded with a mission to provide quality physiotherapy care in Madurai" },
-  { year: "2014", event: "Expanded to include specialized neurological rehabilitation programs" },
-  { year: "2018", event: "Introduced advanced rehabilitation equipment and technologies" },
-  { year: "2022", event: "Milestone of 5000+ successful patient recoveries achieved" },
-  { year: "2024", event: "Recognized as one of the top physiotherapy centers in Tamil Nadu" },
+  { year: "2012", event: "Dr. Stella began her clinical practice, focusing on comprehensive physiotherapy care" },
+  { year: "2014", event: "Specialized in advanced neurological rehabilitation and stroke recovery protocols" },
+  { year: "2018", event: "Expanded expertise to include structured paediatric CP early-intervention programmes" },
+  { year: "2022", event: "Reached the milestone of 5000+ successful patient recoveries in her career" },
+  { year: "2024", event: "Recognized for clinical excellence in musculoskeletal and sports rehabilitation" },
   {
     year: "2025",
-    event: "Crossed 8000 patients treated and added structured paediatric CP early-intervention programme",
+    event: "Crossed 8000+ patients treated across various physiotherapy specializations",
   },
   {
     year: "2026",
-    event: "Launched online appointment booking and expanded patient education resources",
+    event: "Sharon Physiotherapy & Rehabilitation Center was founded in Madurai",
   },
 ];
 
@@ -177,7 +177,7 @@ export function AboutContent() {
             className="max-w-3xl mx-auto text-center"
           >
             <span className="inline-block px-4 py-1.5 rounded-full bg-teal-100 text-teal-700 text-sm font-medium mb-4">
-              Est. 2009 · Madurai&apos;s Trusted Physio Clinic
+              Est. 2026 · Madurai&apos;s Trusted Physio Clinic
             </span>
             <h1 className="font-heading text-4xl sm:text-5xl font-bold text-navy-900 mb-6 leading-tight">
               About Sharon Physiotherapy
@@ -202,18 +202,17 @@ export function AboutContent() {
                 A Legacy of Healing Excellence
               </h2>
               <p className="text-navy-700 leading-relaxed mb-5">
-                Sharon Physiotherapy & Rehabilitation Center was established with a simple yet powerful
+                Established in 2026, Sharon Physiotherapy & Rehabilitation Center was founded with a simple yet powerful
                 vision: to provide world-class physiotherapy services that make a real difference in
-                people&apos;s lives. What started as a small clinic has grown into one of Madurai&apos;s
-                most trusted rehabilitation centers.
+                people&apos;s lives in Madurai.
               </p>
               <p className="text-navy-700 leading-relaxed mb-5">
-                Our founder, Dr. T. Stella Thangam, envisioned a place where patients receive not just
-                treatment, but comprehensive care that addresses their physical, emotional, and psychological
-                needs. This vision continues to guide every decision we make.
+                Our founder, Dr. T. Stella Thangam, brings over 14 years of dedicated clinical experience to the center.
+                She envisioned a place where patients receive not just treatment, but comprehensive care that addresses
+                their physical, emotional, and psychological needs.
               </p>
               <p className="text-navy-700 leading-relaxed">
-                Today, we are proud to have helped over 8000 patients regain their mobility, independence,
+                Throughout her career, she has proudly helped over 8000 patients regain their mobility, independence,
                 and quality of life through expert, compassionate physiotherapy.
               </p>
             </motion.div>
@@ -240,7 +239,7 @@ export function AboutContent() {
       </section>
 
       {/* ── Meet Your Physiotherapist ── */}
-      <section className="py-20 bg-gradient-to-b from-teal-50 to-white">
+      <section className="py-20 bg-linear-to-b from-teal-50 to-white">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div {...fadeUp} className="text-center max-w-3xl mx-auto mb-14">
             <span className="inline-block px-4 py-1.5 rounded-full bg-navy-100 text-navy-700 text-sm font-medium mb-4">
@@ -400,7 +399,7 @@ export function AboutContent() {
       </section>
 
       {/* ── Specialized Treatments ── */}
-      <section className="py-20 bg-gradient-to-b from-navy-50 to-white">
+      <section className="py-20 bg-linear-to-b from-navy-50 to-white">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div {...fadeUp} className="text-center max-w-3xl mx-auto mb-14">
             <span className="inline-block px-4 py-1.5 rounded-full bg-teal-100 text-teal-700 text-sm font-medium mb-4">
@@ -526,7 +525,7 @@ export function AboutContent() {
       </section>
 
       {/* ── Our Journey ── */}
-      <section className="py-20 bg-gradient-to-b from-teal-50/50 to-white">
+      <section className="py-20 bg-linear-to-b from-teal-50/50 to-white">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div {...fadeUp} className="text-center max-w-3xl mx-auto mb-14">
             <span className="inline-block px-4 py-1.5 rounded-full bg-teal-100 text-teal-700 text-sm font-medium mb-4">
@@ -536,8 +535,8 @@ export function AboutContent() {
               Key Milestones
             </h2>
             <p className="text-navy-700 leading-relaxed">
-              A look at the defining moments that shaped our journey to becoming Madurai&apos;s premier
-              physiotherapy center.
+              A look at the defining moments of Dr. Stella&apos;s clinical career leading up to the foundation of
+              Sharon Physiotherapy.
             </p>
           </motion.div>
 
