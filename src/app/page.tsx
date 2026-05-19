@@ -18,7 +18,7 @@ export default function HomePage() {
     url: siteConfig.url,
     telephone: siteConfig.phone,
     email: siteConfig.email,
-    image: `${siteConfig.url}/og-image.jpg`,
+    image: `${siteConfig.url}/opengraph-image`,
     logo: `${siteConfig.url}/Logo.webp`,
     foundingDate: String(siteConfig.founded),
     address: {
@@ -47,7 +47,7 @@ export default function HomePage() {
       "Sports Medicine",
     ],
     priceRange: "₹₹",
-    sameAs: [siteConfig.facebook, siteConfig.instagram, siteConfig.googleMaps],
+    sameAs: [siteConfig.instagram, siteConfig.googleMaps],
     physician: {
       "@type": "Physician",
       name: "Dr. T. Stella Thangam",

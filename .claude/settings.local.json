@@ -5,7 +5,16 @@
       "Bash(Remove-Item -Recurse -Force \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\sharon\\\\sharonphysio\\\\src\\\\app\\\\doctor\")",
       "Bash(Remove-Item -Recurse -Force \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\sharon\\\\sharonphysio\\\\src\\\\app\\\\gallery\")",
       "Bash(Write-Output \"Deleted doctor and gallery directories\")",
-      "Read(//c/c/Users/LENOVO/Desktop/sharon/sharonphysio/**)"
+      "Read(//c/c/Users/LENOVO/Desktop/sharon/sharonphysio/**)",
+      "Bash(cd \"/c/Users/LENOVO/Desktop/sharonphysio\" && find ./src -type f \\\\\\( -name \"*.tsx\" -o -name \"*.ts\" -o -name \"*.jsx\" -o -name \"*.js\" \\\\\\) 2>/dev/null | sort)",
+      "Read(//c/c/Users/LENOVO/Desktop/sharonphysio/**)",
+      "Bash(node -e \"const pkg = require\\('./node_modules/lucide-react/package.json'\\); console.log\\(pkg.version\\);\")",
+      "Bash(node -e \"const icons = require\\('./node_modules/lucide-react'\\); const names = Object.keys\\(icons\\).filter\\(k => typeof icons[k] === 'function'\\).sort\\(\\); console.log\\('Total:', names.length\\); console.log\\(names.slice\\(0,50\\).join\\(', '\\)\\);\")",
+      "Bash(node -e \"const icons = require\\('./node_modules/lucide-react'\\); console.log\\(Object.keys\\(icons\\)\\);\")",
+      "Bash(node -e \"const icons = require\\('./node_modules/lucide-react'\\); const names = Object.keys\\(icons\\).filter\\(k => !k.endsWith\\('Icon'\\)\\); const check = ['PersonStanding','Stethoscope','Scissors','ClipboardList','RotateCcw','TrendingUp','BadgeCheck','ThumbsUp','MoveVertical','Dumbbell','Bandage','ClipboardCheck','HeartHandshake','Syringe','Pill','Thermometer','FlaskConical','Microscope','HeartPulse','Accessibility','RefreshCw','WalletCards','ListChecks','ScrollText','Footprints','PersonStandingIcon']; check.forEach\\(n => console.log\\(n + ': ' + \\(names.includes\\(n\\) ? 'YES' : 'NO'\\)\\)\\);\")",
+      "Bash(npx tsc *)",
+      "Bash(dir public *)",
+      "Bash(dir \"public\\\\blog\")"
     ]
   }
 }

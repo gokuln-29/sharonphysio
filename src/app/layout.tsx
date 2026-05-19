@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     description: "Premium physiotherapy clinic in Madurai specializing in neurological and orthopedic rehabilitation.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
         alt: "Sharon Physiotherapy & Rehabilitation Center",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Sharon Physiotherapy & Rehabilitation Center",
     description: "Premium physiotherapy clinic in Madurai specializing in neurological and orthopedic rehabilitation.",
-    images: ["/og-image.jpg"],
+    images: ["/opengraph-image"],
   },
   robots: {
     index: true,

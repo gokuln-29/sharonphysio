@@ -15,8 +15,10 @@ import {
   Brain,
   Activity,
   Baby,
-  AlignCenter,
-  Zap,
+  PersonStanding,
+  Scissors,
+  Stethoscope,
+  ThumbsUp,
   ArrowRight,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -87,14 +89,14 @@ const specializedAreas = [
     title: "Musculoskeletal Physiotherapy",
     description:
       "Expert care for joint pain, sports injuries, back/neck pain, and arthritis using manual therapy and targeted exercises.",
-    icon: AlignCenter,
+    icon: PersonStanding,
     color: "navy",
   },
   {
     title: "Post-Surgical Rehabilitation",
     description:
       "Structured protocols for knee replacement, hip surgery, and other post-operative recovery to restore full function safely.",
-    icon: Zap,
+    icon: Scissors,
     color: "teal",
   },
 ];
@@ -152,8 +154,8 @@ const milestones = [
 const storyStats = [
   { icon: Award, value: "14+", label: "Years of Excellence", bg: "bg-teal-50", gradient: "gradient-teal" },
   { icon: Users, value: "8000+", label: "Patients Treated", bg: "bg-navy-50", gradient: "gradient-navy" },
-  { icon: Heart, value: "15+", label: "Specialised Services", bg: "bg-navy-50", gradient: "gradient-navy" },
-  { icon: Shield, value: "5.0★", label: "Patient Rating", bg: "bg-teal-50", gradient: "gradient-teal" },
+  { icon: Stethoscope, value: "15+", label: "Specialised Services", bg: "bg-navy-50", gradient: "gradient-navy" },
+  { icon: ThumbsUp, value: "5.0★", label: "Patient Rating", bg: "bg-teal-50", gradient: "gradient-teal" },
 ];
 
 const fadeUp = {
@@ -207,7 +209,7 @@ export function AboutContent() {
                 people&apos;s lives in Madurai.
               </p>
               <p className="text-navy-700 leading-relaxed mb-5">
-                Our founder, Dr. T. Stella Thangam, brings over 14 years of dedicated clinical experience to the center.
+                Our founder, Dr. T. Stella Thangam, MPT - Neurology, brings over 14 years of dedicated clinical experience to the center.
                 She envisioned a place where patients receive not just treatment, but comprehensive care that addresses
                 their physical, emotional, and psychological needs.
               </p>

@@ -5,14 +5,14 @@ import {
   Brain,
   Activity,
   Baby,
-  AlignCenter,
+  PersonStanding,
   Heart,
   Hand,
   CheckCircle,
   ArrowRight,
   Clock,
   Award,
-  Shield,
+  BookOpen,
   Users,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -75,7 +75,7 @@ const treatmentDetails = [
   },
   {
     id: "back",
-    icon: AlignCenter,
+    icon: PersonStanding,
     title: "Back & Neck Pain Treatment",
     category: "Orthopedic",
     description:
@@ -142,7 +142,7 @@ const whyUs = [
     description: "Dr. Stella brings over a decade of specialized clinical experience in neurological and musculoskeletal physiotherapy.",
   },
   {
-    icon: Shield,
+    icon: BookOpen,
     title: "Evidence-Based Practice",
     description: "Every treatment protocol is grounded in current clinical research and internationally recognized guidelines.",
   },

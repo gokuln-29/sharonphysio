@@ -90,15 +90,22 @@ export default function ContactClient() {
 
     setIsLoading(true);
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(formState),
-      });
-      if (!res.ok) {
-        const data = await res.json().catch(() => ({}));
-        throw new Error(data?.error || "Failed to submit. Please try again or call us.");
-      }
+      const { name, email, phone, treatment, preferredDate, preferredSlot, message } = formState;
+      
+      const whatsappMessage = `*New Appointment Request*
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+Treatment: ${treatment || "Not specified"}
+Date: ${preferredDate || "Not specified"}
+Time: ${preferredSlot || "Not specified"}
+Message: ${message || "None"}`;
+
+      const encodedMessage = encodeURIComponent(whatsappMessage);
+      const whatsappUrl = `https://wa.me/${siteConfig.whatsapp}?text=${encodedMessage}`;
+      
+      window.open(whatsappUrl, "_blank");
+      
       setIsSubmitted(true);
       setFormState(initialState);
     } catch (err) {
@@ -153,10 +160,10 @@ export default function ContactClient() {
                         <CheckCircle className="w-10 h-10 text-white" />
                       </div>
                       <h2 className="font-heading text-2xl font-bold text-navy-900 mb-4">
-                        Request received
+                        Redirecting to WhatsApp
                       </h2>
                       <p className="text-navy-600 mb-6">
-                        Thanks — we&apos;ll call you within a few hours during clinic hours to confirm your appointment slot. For urgent help, call{" "}
+                        Your request details have been passed to WhatsApp. Please hit &quot;Send&quot; in WhatsApp to complete your booking. For urgent help, call{" "}
                         <a href={`tel:${siteConfig.phone.replace(/\s/g, "")}`} className="text-primary font-medium underline">{siteConfig.phone}</a>.
                       </p>
                       <Button onClick={() => setIsSubmitted(false)} variant="outline">

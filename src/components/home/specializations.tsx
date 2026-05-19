@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Brain, Bone, Target, Heart } from "lucide-react";
+import { Brain, Bone, Dumbbell, HeartPulse } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const specializations = [
@@ -18,13 +18,13 @@ const specializations = [
     features: ["Joint mobilization", "Post-surgical care", "Fracture rehabilitation", "Arthritis management"],
   },
   {
-    icon: Target,
+    icon: Dumbbell,
     title: "Sports Medicine",
     description: "Specialized programs for athletes and sports enthusiasts to recover from injuries and enhance performance.",
     features: ["Injury prevention", "Performance training", "Return-to-sport protocols", "Sports-specific exercises"],
   },
   {
-    icon: Heart,
+    icon: HeartPulse,
     title: "Chronic Pain Management",
     description: "Holistic approach to managing chronic pain conditions, improving quality of life without medication dependency.",
     features: ["Pain education", "Movement therapy", "Lifestyle modifications", "Mind-body techniques"],

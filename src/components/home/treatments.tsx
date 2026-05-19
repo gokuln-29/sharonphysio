@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Brain, Zap, Activity, Bone, Move, AlignCenter, Baby, Heart, Hand } from "lucide-react";
+import { Brain, Scissors, Activity, Bone, Move, PersonStanding, Baby, Heart, Hand } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 import { treatments } from "@/lib/utils";
@@ -10,11 +10,11 @@ import { ArrowRight } from "lucide-react";
 
 const iconMap: Record<string, React.ElementType> = {
   Brain,
-  Zap,
+  Scissors,
   Activity,
   Bone,
   Move,
-  AlignCenter,
+  PersonStanding,
   Baby,
   Heart,
   Hand,

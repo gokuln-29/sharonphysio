@@ -26,7 +26,7 @@ export const siteConfig = {
   openingHours: [
     { days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], opens: "17:30", closes: "20:00" },
   ],
-  email: "sharonphysio@gmail.com",
+  email: "appointment@sharonphysio.com",
   instagram: "https://www.instagram.com/sharonphysio/",
   // facebook: "https://www.facebook.com/sharonphysiotherapy/",
   googleMaps: "https://share.google/KsxGkWyz6xgCMmTun",
@@ -68,7 +68,7 @@ export const treatments = [
   {
     title: "Back & Neck Pain",
     description: "Targeted treatment for chronic back pain, herniated discs, and cervical issues.",
-    icon: "AlignCenter",
+    icon: "PersonStanding",
     href: "/services#back",
   },
   {
