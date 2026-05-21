@@ -1,8 +1,9 @@
 import { ImageResponse } from "next/og";
 
-export const runtime = "edge";
+export const dynamic = "force-static";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
+export const alt = "Sharon Physiotherapy & Rehabilitation Center";
 
 export default function OgImage() {
   return new ImageResponse(
@@ -69,7 +70,7 @@ export default function OgImage() {
             }}
           >
             <span style={{ color: "#5eead4", fontSize: 18, fontWeight: 600, letterSpacing: 1 }}>
-              Madurai's Trusted Physiotherapy Clinic
+              {"Madurai's Trusted Physiotherapy Clinic"}
             </span>
           </div>
 

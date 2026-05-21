@@ -36,7 +36,6 @@ export const siteConfig = {
     lat: 9.9585,
     lng: 78.1138,
   },
-  formspreeEndpoint: process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT || "",
 };
 
 export const navigation = [

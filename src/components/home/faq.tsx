@@ -40,8 +40,11 @@ export function FAQ() {
               className="mb-4"
             >
               <button
+                type="button"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full text-left p-6 rounded-2xl bg-white border hover:border-teal-300 hover:shadow-lg transition-all duration-300 group"
+                aria-expanded={openIndex === index}
+                aria-controls={`faq-panel-${index}`}
+                className="w-full text-left p-5 sm:p-6 rounded-2xl bg-white border hover:border-teal-300 hover:shadow-lg transition-all duration-300 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
               >
                 <div className="flex items-center justify-between gap-4">
                   <div className="flex items-center gap-3">
@@ -57,9 +60,10 @@ export function FAQ() {
                       }`}
                   />
                 </div>
-                <AnimatePresence>
+                <AnimatePresence initial={false}>
                   {openIndex === index && (
                     <motion.div
+                      id={`faq-panel-${index}`}
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}

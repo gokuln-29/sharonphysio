@@ -1,0 +1,298 @@
+# ============================================================================
+#  Sharon Physiotherapy — Apache .htaccess
+#  For static export of Next.js (`output: 'export'`) deployed on Apache /
+#  shared hosting (cPanel, Hostinger, etc.). Place this file in the document
+#  root alongside the contents of the `out/` directory.
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+#  Use the latest HTTP protocols when available
+# ----------------------------------------------------------------------------
+<IfModule mod_setenvif.c>
+  SetEnvIf Request_URI "\.(?:gif|jpe?g|png|webp|avif|svg|ico|css|js|woff2?)$" no-gzip dont-vary
+</IfModule>
+
+# ----------------------------------------------------------------------------
+#  Default index + directory hardening
+# ----------------------------------------------------------------------------
+DirectoryIndex index.html
+Options -Indexes
+Options +FollowSymLinks
+ServerSignature Off
+
+# ----------------------------------------------------------------------------
+#  Force UTF-8 for text assets
+# ----------------------------------------------------------------------------
+AddDefaultCharset UTF-8
+<IfModule mod_mime.c>
+  AddCharset UTF-8 .html .css .js .xml .json .svg .txt
+</IfModule>
+
+# ----------------------------------------------------------------------------
+#  Correct MIME types (some hosts mis-serve these)
+# ----------------------------------------------------------------------------
+<IfModule mod_mime.c>
+  AddType image/webp                .webp
+  AddType image/avif                .avif
+  AddType image/svg+xml             .svg .svgz
+  AddType image/x-icon              .ico
+  AddType font/woff                 .woff
+  AddType font/woff2                .woff2
+  AddType application/manifest+json .webmanifest
+  AddType application/json          .json
+  AddType application/xml           .xml
+  AddType text/cache-manifest       .appcache
+</IfModule>
+
+# Force the dynamically-generated OG image (extensionless `opengraph-image`)
+# to be served as PNG.
+<IfModule mod_headers.c>
+  <FilesMatch "^opengraph-image$">
+    Header set Content-Type "image/png"
+  </FilesMatch>
+</IfModule>
+
+# ============================================================================
+#  REWRITES
+# ============================================================================
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # --------------------------------------------------------------------------
+  #  1. Force HTTPS
+  # --------------------------------------------------------------------------
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+  # --------------------------------------------------------------------------
+  #  2. Drop the www. prefix (use bare domain).
+  #     If you prefer www, flip the condition and target.
+  # --------------------------------------------------------------------------
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+  # --------------------------------------------------------------------------
+  #  3. Legacy redirects
+  # --------------------------------------------------------------------------
+  RewriteRule ^treatments/?$ /services/ [R=301,L]
+
+  # --------------------------------------------------------------------------
+  #  4. Add a trailing slash to clean URLs (matches Next.js `trailingSlash: true`).
+  #     Skip for real files, existing directories, and asset paths.
+  # --------------------------------------------------------------------------
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !\.[a-zA-Z0-9]{1,6}$
+  RewriteCond %{REQUEST_URI} !/$
+  RewriteRule ^(.*)$ /$1/ [R=301,L]
+
+  # --------------------------------------------------------------------------
+  #  5. Serve pretty URLs from the matching `<slug>/index.html` file.
+  #     This is the routing core for a Next.js static export with
+  #     `trailingSlash: true`.
+  # --------------------------------------------------------------------------
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.+?)/?$ /$1/index.html [L]
+</IfModule>
+
+# ============================================================================
+#  CUSTOM ERROR PAGES
+# ============================================================================
+ErrorDocument 404 /404.html
+
+# ============================================================================
+#  COMPRESSION (mod_deflate)
+# ============================================================================
+<IfModule mod_deflate.c>
+  <IfModule mod_filter.c>
+    AddOutputFilterByType DEFLATE "application/atom+xml" \
+                                  "application/javascript" \
+                                  "application/json" \
+                                  "application/ld+json" \
+                                  "application/manifest+json" \
+                                  "application/rdf+xml" \
+                                  "application/rss+xml" \
+                                  "application/schema+json" \
+                                  "application/vnd.geo+json" \
+                                  "application/vnd.ms-fontobject" \
+                                  "application/x-font-ttf" \
+                                  "application/x-javascript" \
+                                  "application/x-web-app-manifest+json" \
+                                  "application/xhtml+xml" \
+                                  "application/xml" \
+                                  "font/eot" \
+                                  "font/opentype" \
+                                  "font/otf" \
+                                  "font/truetype" \
+                                  "image/bmp" \
+                                  "image/svg+xml" \
+                                  "image/vnd.microsoft.icon" \
+                                  "image/x-icon" \
+                                  "text/cache-manifest" \
+                                  "text/calendar" \
+                                  "text/css" \
+                                  "text/html" \
+                                  "text/javascript" \
+                                  "text/plain" \
+                                  "text/markdown" \
+                                  "text/vcard" \
+                                  "text/vnd.rim.location.xloc" \
+                                  "text/vtt" \
+                                  "text/x-component" \
+                                  "text/x-cross-domain-policy" \
+                                  "text/xml"
+  </IfModule>
+</IfModule>
+
+# ============================================================================
+#  BROWSER CACHING (mod_expires)
+# ============================================================================
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault                                      "access plus 1 month"
+
+  # HTML — keep short so deploys propagate quickly
+  ExpiresByType text/html                             "access plus 0 seconds"
+
+  # Data files
+  ExpiresByType application/atom+xml                  "access plus 1 hour"
+  ExpiresByType application/rdf+xml                   "access plus 1 hour"
+  ExpiresByType application/rss+xml                   "access plus 1 hour"
+  ExpiresByType application/json                      "access plus 0 seconds"
+  ExpiresByType application/ld+json                   "access plus 0 seconds"
+  ExpiresByType application/schema+json               "access plus 0 seconds"
+  ExpiresByType application/vnd.geo+json              "access plus 0 seconds"
+  ExpiresByType application/xml                       "access plus 0 seconds"
+  ExpiresByType text/xml                              "access plus 0 seconds"
+
+  # Manifest & cache-manifest
+  ExpiresByType application/manifest+json             "access plus 1 week"
+  ExpiresByType application/x-web-app-manifest+json   "access plus 0 seconds"
+  ExpiresByType text/cache-manifest                   "access plus 0 seconds"
+
+  # Favicon
+  ExpiresByType image/vnd.microsoft.icon              "access plus 1 week"
+  ExpiresByType image/x-icon                          "access plus 1 week"
+
+  # CSS / JS  (Next outputs hashed filenames in /_next/static, so they can
+  # be cached aggressively — and ARE, via the override below).
+  ExpiresByType text/css                              "access plus 1 year"
+  ExpiresByType text/javascript                       "access plus 1 year"
+  ExpiresByType application/javascript                "access plus 1 year"
+  ExpiresByType application/x-javascript              "access plus 1 year"
+
+  # Media
+  ExpiresByType audio/ogg                             "access plus 1 month"
+  ExpiresByType image/bmp                             "access plus 1 month"
+  ExpiresByType image/gif                             "access plus 1 month"
+  ExpiresByType image/jpeg                            "access plus 1 month"
+  ExpiresByType image/png                             "access plus 1 month"
+  ExpiresByType image/svg+xml                         "access plus 1 month"
+  ExpiresByType image/webp                            "access plus 1 month"
+  ExpiresByType image/avif                            "access plus 1 month"
+  ExpiresByType video/mp4                             "access plus 1 month"
+  ExpiresByType video/ogg                             "access plus 1 month"
+  ExpiresByType video/webm                            "access plus 1 month"
+
+  # Web fonts
+  ExpiresByType font/eot                              "access plus 1 year"
+  ExpiresByType font/opentype                         "access plus 1 year"
+  ExpiresByType font/otf                              "access plus 1 year"
+  ExpiresByType font/ttf                              "access plus 1 year"
+  ExpiresByType font/woff                             "access plus 1 year"
+  ExpiresByType font/woff2                            "access plus 1 year"
+  ExpiresByType application/font-woff                 "access plus 1 year"
+  ExpiresByType application/font-woff2                "access plus 1 year"
+  ExpiresByType application/vnd.ms-fontobject         "access plus 1 year"
+  ExpiresByType application/x-font-ttf                "access plus 1 year"
+
+  # robots.txt
+  ExpiresByType text/plain                            "access plus 1 day"
+</IfModule>
+
+# ============================================================================
+#  Cache-Control headers (defence-in-depth alongside Expires)
+# ============================================================================
+<IfModule mod_headers.c>
+  # Immutable hashed assets emitted by Next (/_next/static/...)
+  <FilesMatch "\.(?:js|css|woff2?|ttf|otf|eot|webp|avif|png|jpe?g|gif|svg|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # HTML must always be revalidated so that deploys go live immediately
+  <FilesMatch "\.(?:html?|xml|json|txt)$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+
+  # Never cache sitemap / robots / manifest aggressively
+  <FilesMatch "(sitemap\.xml|robots\.txt|manifest\.webmanifest)$">
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </FilesMatch>
+
+  # The hashed Next.js asset directory is fully immutable
+  <IfModule mod_setenvif.c>
+    SetEnvIf Request_URI "^/_next/static/" IS_IMMUTABLE_ASSET=1
+  </IfModule>
+  Header set Cache-Control "public, max-age=31536000, immutable" env=IS_IMMUTABLE_ASSET
+</IfModule>
+
+# ============================================================================
+#  SECURITY HEADERS
+# ============================================================================
+<IfModule mod_headers.c>
+  # Strict transport (1 year, include subdomains, opt-in to preload list)
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" "expr=%{HTTPS} == 'on'"
+
+  # Block MIME-type sniffing
+  Header set X-Content-Type-Options "nosniff"
+
+  # Prevent the site being framed (clickjacking)
+  Header set X-Frame-Options "SAMEORIGIN"
+
+  # Restrict cross-origin information leakage
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Disallow legacy XSS auditor (deprecated but harmless)
+  Header set X-XSS-Protection "0"
+
+  # Limit which browser features the site can use
+  Header set Permissions-Policy "geolocation=(), camera=(), microphone=(), payment=(), usb=(), interest-cohort=()"
+
+  # Allow Google Maps embed, WhatsApp deep-links, fonts, OG image scrapers
+  Header set Content-Security-Policy "default-src 'self'; \
+script-src 'self' 'unsafe-inline' 'unsafe-eval'; \
+style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; \
+font-src 'self' https://fonts.gstatic.com data:; \
+img-src 'self' data: blob: https:; \
+media-src 'self' https:; \
+frame-src 'self' https://www.google.com https://maps.google.com; \
+connect-src 'self' https:; \
+form-action 'self' https://wa.me; \
+base-uri 'self'; \
+object-src 'none'; \
+frame-ancestors 'self';"
+
+  # Cross-origin isolation defaults (safe for static sites)
+  Header set Cross-Origin-Opener-Policy "same-origin"
+  Header set Cross-Origin-Resource-Policy "same-site"
+
+  # Strip the ETag header — Expires + Cache-Control are enough and avoids
+  # noisy revalidation on shared hosts that mishandle inodes.
+  Header unset ETag
+</IfModule>
+FileETag None
+
+# ============================================================================
+#  PROTECT SENSITIVE FILES
+# ============================================================================
+<FilesMatch "(^\.|composer\.(json|lock)|package(-lock)?\.json|yarn\.lock|pnpm-lock\.yaml|\.env.*|\.git.*|\.htaccess|\.htpasswd|tsconfig\.json|next\.config\.(ts|js|mjs)|README\.md)$">
+  Require all denied
+</FilesMatch>
+
+# Block access to source-map files in production
+<FilesMatch "\.map$">
+  Require all denied
+</FilesMatch>
