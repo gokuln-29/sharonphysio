@@ -69,3 +69,14 @@ Use 14 days after deployment for a baseline before setting numeric growth target
 Verified Sharon Chrome profile and GA4 account 399078749 / property 542997603. Stream 15143365013 uses G-T5F2QL12ZV and reports data collection in the past 48 hours. Dashboard baseline shown for Last 30 days: 46 active users, 70 views, 194 events, zero key events. These are analytics counts, not verified patients.
 
 Saved GA4 URL-query redaction for name, phone, mobile, email, message and text; existing email redaction remains enabled. Verified the stream summary displays six URL query parameter keys. No contact conversion definitions or GTM publishing yet.
+
+## Callback form — 18 November 2026
+
+- "Request a callback" card on /contact/ (name + mobile required; best time and service optional; no health details). A hero shortcut links to it.
+- Delivery: Google Apps Script web app (source: `docs/callback-receiver.gs`) bound to a private Google Sheet in the clinic's Google account. Each valid request becomes a row on the "Callback requests" tab (lead-tracker columns plus name, phone, best time, service) and an email to appointment@sharonphysio.com. This Sheet is now the lead tracker; log new/returning, status, first response, appointment and attendance there.
+- The website shows "request sent" only when the script confirms it stored the request. If delivery fails the visitor is told the clinic has not received it and is pointed to phone/WhatsApp.
+- Analytics: `callback_form_start` and `callback_request` (fires only on confirmed delivery). `callback_request` is the first genuine received-enquiry signal; mark it as a GA4 key event once it appears in the Events list.
+- The form only renders when `NEXT_PUBLIC_CALLBACK_URL` is set at build time. It lives in `.env.production.local` (git-ignored). A build without it silently hides the form, so keep that file when rebuilding.
+- Protections: server-side validation, hidden honeypot field, minimum-fill-time check, 30 requests/hour cap, 10-minute duplicate suppression, spreadsheet formula-injection guard. 18 logic tests: `node scripts/test-callback-receiver.mjs`.
+- Verified 18 Nov 2026: direct endpoint tests, a browser request from https://sharonphysio.com under the live CSP (CORS readable), and a real form submission end to end. Test rows were deleted afterwards. Production upload of the build containing the form is still pending.
+- Open items: someone must read appointment@sharonphysio.com and the Sheet daily and call people back; privacy-page wording should be reviewed by the clinic; Apps Script email quota for a consumer Google account is limited (about 100 recipients/day), far above the 30/hour cap.
