@@ -67,16 +67,16 @@ export function Footer() {
               <Link href="/services/sports-injury-rehabilitation/" className="block text-sm text-navy-200 hover:text-teal-400 transition-colors">
                 Sports Injury Rehab
               </Link>
-              <Link href="/services#cp" className="block text-sm text-navy-200 hover:text-teal-400 transition-colors">
+              <Link href="/services/cerebral-palsy-management/" className="block text-sm text-navy-200 hover:text-teal-400 transition-colors">
                 Cerebral Palsy Management
               </Link>
               <Link href="/services/back-neck-pain/" className="block text-sm text-navy-200 hover:text-teal-400 transition-colors">
                 Back &amp; Neck Pain
               </Link>
-              <Link href="/services#women" className="block text-sm text-navy-200 hover:text-teal-400 transition-colors">
+              <Link href="/services/womens-fitness-care/" className="block text-sm text-navy-200 hover:text-teal-400 transition-colors">
                 Women&apos;s Fitness Care
               </Link>
-              <Link href="/services#manual" className="block text-sm text-navy-200 hover:text-teal-400 transition-colors">
+              <Link href="/services/manual-therapy/" className="block text-sm text-navy-200 hover:text-teal-400 transition-colors">
                 Manual Therapy
               </Link>
               <Link href="/services/knee-pain/" className="block text-sm text-navy-200 hover:text-teal-400">Knee Pain Physiotherapy</Link>

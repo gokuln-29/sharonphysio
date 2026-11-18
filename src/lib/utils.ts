@@ -63,7 +63,7 @@ export const treatments = [
     title: "Cerebral Palsy Management",
     description: "Specialized pediatric physiotherapy for children with CP to improve motor development and function.",
     icon: "Baby",
-    href: "/services#cp",
+    href: "/services/cerebral-palsy-management/",
   },
   {
     title: "Back & Neck Pain",
@@ -75,13 +75,13 @@ export const treatments = [
     title: "Women's Fitness Care",
     description: "Specialized physiotherapy for women's health, prenatal, postnatal, and pelvic floor care.",
     icon: "Heart",
-    href: "/services#women",
+    href: "/services/womens-fitness-care/",
   },
   {
     title: "Manual Therapy",
     description: "Hands-on techniques to mobilize joints and soft tissues for pain relief and improved mobility.",
     icon: "Hand",
-    href: "/services#manual",
+    href: "/services/manual-therapy/",
   },
 ];
 

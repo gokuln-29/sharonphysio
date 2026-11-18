@@ -230,7 +230,7 @@ export function ServicesContent() {
       <section className="container mx-auto px-4 py-8 lg:px-8">
         <h2 className="font-heading text-2xl font-bold">Find the right assessment</h2>
         <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {[['back-neck-pain', 'Back & neck pain'], ['stroke-rehabilitation', 'Stroke rehabilitation'], ['sports-injury-rehabilitation', 'Sports injury rehabilitation'], ['knee-pain', 'Knee pain'], ['post-surgery-rehabilitation', 'Post-surgery rehabilitation']].map(([slug, label]) => <Link key={slug} href={`/services/${slug}/`} className="rounded-xl border border-teal-100 bg-teal-50 p-5 font-semibold text-primary hover:border-primary">{label} →</Link>)}
+          {[['back-neck-pain', 'Back & neck pain'], ['stroke-rehabilitation', 'Stroke rehabilitation'], ['sports-injury-rehabilitation', 'Sports injury rehabilitation'], ['knee-pain', 'Knee pain'], ['post-surgery-rehabilitation', 'Post-surgery rehabilitation'], ['arthritis-treatment', 'Arthritis'], ['womens-fitness-care', 'Women’s physiotherapy'], ['cerebral-palsy-management', 'Cerebral palsy (children)'], ['manual-therapy', 'Manual therapy']].map(([slug, label]) => <Link key={slug} href={`/services/${slug}/`} className="rounded-xl border border-teal-100 bg-teal-50 p-5 font-semibold text-primary hover:border-primary">{label} →</Link>)}
         </div>
       </section>
       {/* ── Treatment Details ── */}
@@ -312,6 +312,21 @@ export function ServicesContent() {
                       {treatment.id === "back" && (
                         <Link href="/services/back-neck-pain/" className="text-sm font-medium text-primary underline">
                           Learn about back and neck pain physiotherapy
+                        </Link>
+                      )}
+                      {treatment.id === "cp" && (
+                        <Link href="/services/cerebral-palsy-management/" className="text-sm font-medium text-primary underline">
+                          Learn about cerebral palsy physiotherapy for children
+                        </Link>
+                      )}
+                      {treatment.id === "women" && (
+                        <Link href="/services/womens-fitness-care/" className="text-sm font-medium text-primary underline">
+                          Learn about women’s physiotherapy
+                        </Link>
+                      )}
+                      {treatment.id === "manual" && (
+                        <Link href="/services/manual-therapy/" className="text-sm font-medium text-primary underline">
+                          Learn about manual therapy
                         </Link>
                       )}
                       <Link href="/contact#book">
