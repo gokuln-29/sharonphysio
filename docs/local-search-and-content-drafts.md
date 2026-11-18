@@ -44,7 +44,7 @@ Link: https://sharonphysio.com/services/post-surgery-rehabilitation/?utm_source=
 
 Initial response: Thank you for contacting Sharon Physiotherapy. Would you prefer a clinic appointment on [available day/time]? Please let us know if you need assistance accessing the clinic. We will confirm the appointment once a time is agreed.
 
-Confirmed appointment: Your appointment is confirmed for [date/time, India time]. Address: 12, Susee Nagar, Dhopas Road, Anaiyur, Madurai. Please bring relevant reports and your treating clinician’s instructions. Call +91 82483 05206 if you need to change the time.
+Confirmed appointment: Your appointment is confirmed for [date/time, India time]. Address: 11-17/72, Malar Nagar, Anaiyur, Madurai. Please bring relevant reports and your treating clinician’s instructions. Call +91 82483 05206 if you need to change the time.
 
 Review request, only after a genuine visit and appropriate permission: Thank you for visiting Sharon Physiotherapy. If you would like to share your experience, you can leave an honest review here: [verified Google review link]. Please avoid sharing medical or other private details in a public review.
 

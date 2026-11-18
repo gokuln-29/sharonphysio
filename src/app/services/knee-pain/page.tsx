@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { VisitDetails } from "@/components/services/visit-details";
+import { ServiceSchema } from "@/components/services/service-schema";
 const title = "Knee Pain Physiotherapy in Madurai";
 const description = "Discuss knee pain, stiffness and everyday movement at Sharon Physiotherapy in Anaiyur, Madurai. Request a physiotherapy assessment.";
 const path = "/services/knee-pain/";
@@ -12,6 +13,7 @@ export default function ServicePage() {
     <p className="mt-5 text-lg leading-relaxed text-navy-700">If knee pain or stiffness is making walking, stairs or getting up from a chair difficult, contact our Anaiyur clinic to discuss an assessment.</p>
     <Link href="/contact/?service=knee#book" data-contact-source="service" className="mt-6 inline-flex rounded-xl bg-primary px-5 py-3 font-semibold text-white">Request an assessment</Link>
     <section className="mt-10"><h2 className="font-heading text-2xl font-bold">What to discuss at your visit</h2><p className="mt-4 leading-relaxed text-navy-700">Describe when the difficulty started and which activities matter most to you. Bring relevant reports and tell the physiotherapist about previous injuries or surgery. Your assessment helps determine the next steps; treatment and session needs vary.</p></section>
+    <ServiceSchema title={title} description={description} path={path} />
     <VisitDetails service="knee" />
   </article>;
 }

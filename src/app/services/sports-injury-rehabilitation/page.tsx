@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { VisitDetails } from "@/components/services/visit-details";
+import { ServiceSchema } from "@/components/services/service-schema";
 
 const title = "Sports Injury Rehabilitation in Madurai";
 const description =
@@ -48,6 +49,7 @@ export default function SportsInjuryRehabilitationPage() {
         </p>
       </section>
 
+      <ServiceSchema title={title} description={description} path={path} />
       <VisitDetails service="sports" />
     </article>
   );

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { VisitDetails } from "@/components/services/visit-details";
+import { ServiceSchema } from "@/components/services/service-schema";
 
 const title = "Back and Neck Pain Physiotherapy in Madurai";
 const description =
@@ -48,6 +49,7 @@ export default function BackNeckPainPage() {
         </p>
       </section>
 
+      <ServiceSchema title={title} description={description} path={path} />
       <VisitDetails service="back" />
     </article>
   );
