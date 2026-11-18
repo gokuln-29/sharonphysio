@@ -155,7 +155,7 @@ const storyStats = [
   { icon: Award, value: "14+", label: "Years of Excellence", bg: "bg-teal-50", gradient: "gradient-teal" },
   { icon: Users, value: "8000+", label: "Patients Treated", bg: "bg-navy-50", gradient: "gradient-navy" },
   { icon: Stethoscope, value: "15+", label: "Specialised Services", bg: "bg-navy-50", gradient: "gradient-navy" },
-  { icon: ThumbsUp, value: "5.0★", label: "Patient Rating", bg: "bg-teal-50", gradient: "gradient-teal" },
+  { icon: ThumbsUp, value: "5.0★", label: "Google Rating", bg: "bg-teal-50", gradient: "gradient-teal" },
 ];
 
 const fadeUp = {
@@ -276,7 +276,7 @@ export function AboutContent() {
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 fill-yellow-300 text-yellow-300" />
                     ))}
-                    <span className="text-xs text-teal-100 ml-2">5.0 · 200+ reviews</span>
+                    <span className="text-xs text-teal-100 ml-2">5.0 rating on Google</span>
                   </div>
                 </div>
                 <CardContent className="p-6">
