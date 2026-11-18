@@ -6,6 +6,7 @@ import { FAQ } from "@/components/home/faq";
 import { CTASection } from "@/components/home/cta";
 import { GoogleMap } from "@/components/home/google-map";
 import { BeforeAfter } from "@/components/home/before-after";
+import { ClinicGallery } from "@/components/home/clinic-gallery";
 import { faqs, siteConfig } from "@/lib/utils";
 
 export default function HomePage() {
@@ -24,7 +25,7 @@ export default function HomePage() {
     address: {
       "@type": "PostalAddress",
       streetAddress: siteConfig.addressLine,
-      addressLocality: siteConfig.locality,
+      addressLocality: siteConfig.city,
       addressRegion: siteConfig.region,
       postalCode: siteConfig.postalCode,
       addressCountry: siteConfig.country,
@@ -47,7 +48,7 @@ export default function HomePage() {
       "Sports Medicine",
     ],
     priceRange: "₹₹",
-    sameAs: [siteConfig.instagram, siteConfig.googleMaps],
+    sameAs: [siteConfig.instagram, siteConfig.facebook, siteConfig.googleMaps],
     physician: {
       "@type": "Physician",
       name: "Dr. T. Stella Thangam",
@@ -73,6 +74,7 @@ export default function HomePage() {
       <Treatments />
       <Specializations />
       <BeforeAfter />
+      <ClinicGallery />
       <Testimonials />
       <FAQ />
       <GoogleMap />

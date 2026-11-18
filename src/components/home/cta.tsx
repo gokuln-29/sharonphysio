@@ -52,7 +52,7 @@ export function CTASection() {
               </div>
               <div className="flex items-center gap-3 text-white/80">
                 <Clock className="w-5 h-5 text-teal-400 shrink-0" />
-                <span className="text-sm">Mon-Sat, 5:30PM - 8PM</span>
+                <span className="text-sm">Mon-Sat, 6:00PM - 9:00PM</span>
               </div>
               <div className="flex items-center gap-3 text-white/80">
                 <Phone className="w-5 h-5 text-teal-400 shrink-0" />

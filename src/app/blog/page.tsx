@@ -25,7 +25,7 @@ export default function BlogIndex() {
               Health Insights & Recovery Guides
             </h1>
             <p className="text-lg text-navy-700 leading-relaxed">
-              Evidence-based articles from our physiotherapy team to help you understand your condition and take recovery into your own hands.
+              Practical guides to help you prepare for physiotherapy, talk through your goals, and know what to ask at your next appointment.
             </p>
           </div>
         </div>
@@ -36,10 +36,10 @@ export default function BlogIndex() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post) => (
               <Card key={post.slug} className="h-full overflow-hidden hover:shadow-xl transition-all duration-300 group">
-                <div className="h-44 gradient-teal" />
+
                 <CardContent className="p-6 flex flex-col h-full">
                   <div className="flex items-center gap-4 text-xs text-navy-500 mb-3">
-                    <span className="inline-flex items-center gap-1"><Calendar className="w-3 h-3" />{post.date}</span>
+                    {post.date && <span className="inline-flex items-center gap-1"><Calendar className="w-3 h-3" />{post.date}</span>}
                     <span className="inline-flex items-center gap-1"><Clock className="w-3 h-3" />{post.readingMinutes} min read</span>
                   </div>
                   <h2 className="font-heading text-lg font-bold text-navy-900 mb-3 group-hover:text-primary transition-colors">
@@ -48,6 +48,7 @@ export default function BlogIndex() {
                   <p className="text-sm text-navy-600 mb-6 line-clamp-3">{post.excerpt}</p>
                   <Link
                     href={`/blog/${post.slug}`}
+                    aria-label={`Read ${post.title}`}
                     className="mt-auto inline-flex items-center gap-1 text-sm font-semibold text-primary"
                   >
                     Read article

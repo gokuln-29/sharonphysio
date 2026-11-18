@@ -62,10 +62,10 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
             {post.title}
           </h1>
           <div className="flex items-center gap-4 text-sm text-navy-500 mb-8">
-            <span className="inline-flex items-center gap-1"><Calendar className="w-4 h-4" />{post.date}</span>
+            {post.date && <span className="inline-flex items-center gap-1"><Calendar className="w-4 h-4" />{post.date}</span>}
             <span className="inline-flex items-center gap-1"><Clock className="w-4 h-4" />{post.readingMinutes} min read</span>
           </div>
-          <div className="h-56 sm:h-72 rounded-3xl gradient-teal mb-10" />
+          <p className="mb-8 text-lg leading-relaxed text-navy-700">{post.excerpt}</p>
 
           <div className="space-y-6 text-navy-700 leading-relaxed">
             {post.content.map((block, i) => (
@@ -79,6 +79,20 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
               </div>
             ))}
           </div>
+
+          {post.source && (
+            <p className="mt-8 text-sm text-navy-700">
+              Further reading.{" "}
+              <a href={post.source.href} className="font-medium text-primary underline">
+                {post.source.label}
+              </a>
+            </p>
+          )}
+          {post.relatedService && (
+            <Link href={post.relatedService.href} className="mt-6 inline-block font-medium text-primary underline">
+              {post.relatedService.label}
+            </Link>
+          )}
 
           <div className="mt-12 p-6 rounded-2xl bg-teal-50 border border-teal-200">
             <p className="text-sm text-navy-700 mb-4">

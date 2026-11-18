@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+import { Phone, MessageCircle, CalendarDays } from "lucide-react";
 import { motion } from "framer-motion";
 import { siteConfig } from "@/lib/utils";
 
@@ -15,11 +17,13 @@ export function WhatsAppButton() {
   return (
     <motion.a
       href={`https://wa.me/${siteConfig.whatsapp}?text=${WHATSAPP_PREFILL}`}
+      aria-label="Chat with the clinic on WhatsApp"
+      data-contact-source="floating"
       target="_blank"
       rel="noopener noreferrer"
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
-      className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors group"
+      className="hidden md:flex fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors group"
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
     >
@@ -37,7 +41,9 @@ export function CallNowButton() {
   return (
     <motion.a
       href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
-      className="fixed bottom-6 left-6 z-50 w-14 h-14 gradient-teal rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all group"
+      aria-label="Call Sharon Physiotherapy"
+      data-contact-source="floating"
+      className="hidden md:flex fixed bottom-6 left-6 z-50 w-14 h-14 gradient-teal rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all group"
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
     >
@@ -48,5 +54,18 @@ export function CallNowButton() {
         Call now
       </span>
     </motion.a>
+  );
+}
+
+export function MobileContactBar() {
+  const itemClass = "flex min-h-14 flex-col items-center justify-center gap-1 rounded-xl px-2 text-xs font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2";
+  return (
+    <nav aria-label="Contact the clinic" className="fixed inset-x-0 bottom-0 z-40 border-t border-teal-100 bg-white px-3 pt-2 pb-[calc(0.5rem+env(safe-area-inset-bottom))] shadow-lg md:hidden">
+      <div className="mx-auto grid max-w-lg grid-cols-3 gap-2">
+        <a href={`tel:${siteConfig.phone.replace(/\s/g, "")}`} data-contact-source="mobile_bar" className={`${itemClass} bg-teal-50 text-teal-800`}><Phone className="h-5 w-5" aria-hidden="true" />Call</a>
+        <a href={`https://wa.me/${siteConfig.whatsapp}?text=${WHATSAPP_PREFILL}`} target="_blank" rel="noopener noreferrer" data-contact-source="mobile_bar" className={`${itemClass} bg-green-50 text-green-800`}><MessageCircle className="h-5 w-5" aria-hidden="true" />WhatsApp</a>
+        <Link href="/contact/#book" data-contact-source="mobile_bar" className={`${itemClass} bg-primary text-white`}><CalendarDays className="h-5 w-5" aria-hidden="true" />Appointment</Link>
+      </div>
+    </nav>
   );
 }

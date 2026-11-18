@@ -41,6 +41,7 @@ export function GoogleMap() {
         <div className="text-center mt-6">
           <a
             href={siteConfig.googleMaps}
+              data-contact-action="directions" data-contact-source="location"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"

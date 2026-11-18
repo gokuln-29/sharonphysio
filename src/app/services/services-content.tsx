@@ -227,6 +227,12 @@ export function ServicesContent() {
         </div>
       </section>
 
+      <section className="container mx-auto px-4 py-8 lg:px-8">
+        <h2 className="font-heading text-2xl font-bold">Find the right assessment</h2>
+        <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {[['back-neck-pain', 'Back & neck pain'], ['stroke-rehabilitation', 'Stroke rehabilitation'], ['sports-injury-rehabilitation', 'Sports injury rehabilitation'], ['knee-pain', 'Knee pain'], ['post-surgery-rehabilitation', 'Post-surgery rehabilitation']].map(([slug, label]) => <Link key={slug} href={`/services/${slug}/`} className="rounded-xl border border-teal-100 bg-teal-50 p-5 font-semibold text-primary hover:border-primary">{label} →</Link>)}
+        </div>
+      </section>
       {/* ── Treatment Details ── */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
@@ -293,6 +299,21 @@ export function ServicesContent() {
                           {treatment.duration}
                         </span>
                       </div>
+                      {treatment.id === "stroke" && (
+                        <Link href="/services/stroke-rehabilitation/" className="text-sm font-medium text-primary underline">
+                          Learn about stroke rehabilitation
+                        </Link>
+                      )}
+                      {treatment.id === "sports" && (
+                        <Link href="/services/sports-injury-rehabilitation/" className="text-sm font-medium text-primary underline">
+                          Learn about sports injury rehabilitation
+                        </Link>
+                      )}
+                      {treatment.id === "back" && (
+                        <Link href="/services/back-neck-pain/" className="text-sm font-medium text-primary underline">
+                          Learn about back and neck pain physiotherapy
+                        </Link>
+                      )}
                       <Link href="/contact#book">
                         <Button size="sm" className="group">
                           Book This Service
