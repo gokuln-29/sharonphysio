@@ -37,7 +37,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-sm text-navy-200 leading-relaxed max-w-sm">
-              Premium physiotherapy clinic in Madurai specializing in neurological and orthopedic rehabilitation. Your path to recovery starts here.
+              Physiotherapy clinic in Anaiyur, Madurai specializing in neurological and orthopedic rehabilitation. Contact us to arrange an assessment.
             </p>
           </div>
 

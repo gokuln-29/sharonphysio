@@ -13,10 +13,10 @@ const stats = [
 ];
 
 const features = [
-  "Expert neurological rehabilitation",
-  "Advanced orthopedic treatments",
-  "Personalized recovery plans",
-  "State-of-the-art equipment",
+  "Neurological rehabilitation",
+  "Orthopedic physiotherapy",
+  "Plans based on your assessment",
+  "Hands-on and exercise-based care",
   "Convenient location in Madurai",
 ];
 
@@ -52,7 +52,7 @@ export function Hero() {
             </h1>
             
             <p className="text-lg text-navy-700 leading-relaxed mb-8 max-w-xl">
-              We provide neurological and orthopedic rehabilitation in Anaiyur, Madurai, to help you regain mobility, strength, and independence.
+              We provide neurological and orthopedic rehabilitation in Anaiyur, Madurai, to help you work towards your mobility, strength and independence goals.
             </p>
             
             <div className="space-y-3 mb-8">

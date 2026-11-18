@@ -8,8 +8,8 @@ const specializations = [
   {
     icon: Brain,
     title: "Neurological Rehabilitation",
-    description: "Expert care for stroke, spinal cord injuries, CP, ADHD, Autism, Dementia, and other neurological conditions using evidence-based techniques.",
-    features: ["Neuroplasticity training", "Balance restoration", "Functional movement", "Cognitive rehabilitation"],
+    description: "Rehabilitation for stroke, spinal cord injuries, CP, ADHD, Autism, Dementia, and other neurological conditions, planned from your assessment.",
+    features: ["Task-specific practice", "Balance training", "Functional movement", "Cognitive rehabilitation"],
   },
   {
     icon: Bone,
@@ -20,13 +20,13 @@ const specializations = [
   {
     icon: Dumbbell,
     title: "Sports Medicine",
-    description: "Specialized programs for athletes and sports enthusiasts to recover from injuries and enhance performance.",
+    description: "Programs for athletes and sports enthusiasts, planned around the sport and the injury.",
     features: ["Injury prevention", "Performance training", "Return-to-sport protocols", "Sports-specific exercises"],
   },
   {
     icon: HeartPulse,
     title: "Chronic Pain Management",
-    description: "Holistic approach to managing chronic pain conditions, improving quality of life without medication dependency.",
+    description: "An approach to long-standing pain that looks at movement, education and daily activities.",
     features: ["Pain education", "Movement therapy", "Lifestyle modifications", "Mind-body techniques"],
   },
 ];
@@ -49,7 +49,7 @@ export function Specializations() {
               Specialized Expertise in Neurological & Orthopedic Care
             </h2>
             <p className="text-navy-700 leading-relaxed mb-8">
-              Our clinic combines cutting-edge techniques with personalized care to deliver exceptional results. We specialize in complex neurological and orthopedic conditions that require dedicated, expert attention.
+              Our clinic combines hands-on and exercise-based techniques with personalized care. We work with neurological and orthopedic conditions that need dedicated, focused attention.
             </p>
             
             <div className="space-y-4">

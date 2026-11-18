@@ -4,20 +4,21 @@ import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
+// Illustrative examples of how goals are set, not patient results. No outcomes, figures or timeframes are implied.
 const caseStudies = [
   {
-    title: "Stroke Recovery",
-    patient: "A. Kumar",
-    challenge: "Complete paralysis on left side after ischemic stroke.",
-    recovery: "Regained 90% mobility and ability to walk independently.",
-    period: "6 Months",
+    title: "Stroke rehabilitation",
+    patient: "Example",
+    challenge: "Difficulty standing, walking or using one side of the body after a stroke.",
+    recovery: "Goals might include practising standing, walking and everyday tasks, set with you and your caregiver.",
+    period: "Example only",
   },
   {
-    title: "ACL Rehabilitation",
-    patient: "S. Priya",
-    challenge: "Severe knee instability following sports injury.",
-    recovery: "Full return to competitive sports with 100% joint stability.",
-    period: "4 Months",
+    title: "Sports injury rehabilitation",
+    patient: "Example",
+    challenge: "A knee that feels unstable after a sports injury.",
+    recovery: "Goals might include rebuilding strength and control step by step, guided by your physiotherapist and your surgeon or doctor.",
+    period: "Example only",
   },
 ];
 
@@ -33,13 +34,13 @@ export function BeforeAfter() {
             transition={{ duration: 0.6 }}
           >
             <span className="inline-block px-4 py-1.5 rounded-full bg-teal-100 text-teal-700 text-sm font-medium mb-4">
-              Real Impact
+              How we work
             </span>
             <h2 className="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-6">
-              Transformation Through Rehabilitation
+              A Clear, Step-by-Step Approach
             </h2>
             <p className="text-navy-700 leading-relaxed mb-8">
-              We focus on measurable progress and life-changing results. Our specialized programs are designed to take you from initial challenge to complete recovery.
+              Rehabilitation starts with an assessment and goals agreed with you, and your progress is reviewed as you go. Every person’s plan and pace is different, and we cannot promise a particular result.
             </p>
             
             <div className="space-y-6">
@@ -52,11 +53,11 @@ export function BeforeAfter() {
                   </li>
                   <li className="flex items-center gap-3 text-sm text-navy-700">
                     <CheckCircle className="w-5 h-5 text-teal-600" />
-                    Targeted rehabilitation milestones
+                    Goals agreed with you
                   </li>
                   <li className="flex items-center gap-3 text-sm text-navy-700">
                     <CheckCircle className="w-5 h-5 text-teal-600" />
-                    Continuous progress monitoring
+                    Progress reviewed during your plan
                   </li>
                 </ul>
               </div>
@@ -82,11 +83,11 @@ export function BeforeAfter() {
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                       <div>
-                        <div className="text-xs font-bold text-red-500 uppercase tracking-wider mb-1">Challenge</div>
+                        <div className="text-xs font-bold text-navy-600 uppercase tracking-wider mb-1">Starting point</div>
                         <p className="text-sm text-navy-700">{study.challenge}</p>
                       </div>
                       <div>
-                        <div className="text-xs font-bold text-green-600 uppercase tracking-wider mb-1">Recovery</div>
+                        <div className="text-xs font-bold text-teal-700 uppercase tracking-wider mb-1">Possible goals</div>
                         <p className="text-sm text-navy-700">{study.recovery}</p>
                       </div>
                     </div>

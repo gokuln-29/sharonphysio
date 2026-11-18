@@ -27,7 +27,7 @@ export function CTASection() {
               Ready to Start Your Recovery Journey?
             </h2>
             <p className="text-navy-200 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-              Book an appointment today and take the first step towards better health and mobility. Our expert team is ready to help you achieve your rehabilitation goals.
+              Book an appointment to talk through your goals. Our team can explain what an assessment involves and arrange a suitable time.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">

@@ -28,11 +28,11 @@ import { CTASection } from "@/components/home/cta";
 
 const qualifications = [
   "MPT (Master of Physiotherapy) — Neurology Specialization",
-  "Specialist in Neurological Rehabilitation",
-  "Stroke Rehabilitation Expert",
-  "Cerebral Palsy Management Specialist",
-  "Orthopedic & Pediatric Rehabilitation Expert",
-  "Sports Physiotherapy & Women's Fitness Health Care",
+  "Experience in neurological rehabilitation",
+  "Experience in stroke rehabilitation",
+  "Experience in cerebral palsy management",
+  "Experience in orthopedic and pediatric rehabilitation",
+  "Experience in sports physiotherapy and women's fitness",
 ];
 
 const achievements = [
@@ -46,19 +46,19 @@ const approach = [
   {
     title: "Patient-Centered Philosophy",
     description:
-      "Every treatment plan is customized based on individual needs, goals, and lifestyle considerations to ensure the best possible outcome.",
+      "Every treatment plan is customized based on individual needs, goals, and lifestyle.",
     icon: Heart,
   },
   {
     title: "Evidence-Based Practice",
     description:
-      "All treatments are grounded in the latest clinical research and internationally recognized guidelines for optimal, safe results.",
+      "Treatment is guided by current clinical practice and recognized guidelines, with safety in mind.",
     icon: BookOpen,
   },
   {
     title: "Continuous Learning",
     description:
-      "Dr. Stella regularly attends workshops, courses, and conferences to bring cutting-edge techniques to every patient.",
+      "Dr. Stella regularly attends workshops, courses, and conferences to keep her knowledge and techniques up to date.",
     icon: GraduationCap,
   },
 ];
@@ -67,14 +67,14 @@ const specializedAreas = [
   {
     title: "Neurological Rehabilitation",
     description:
-      "Advanced neurorehabilitation for stroke, Parkinson's, and spinal cord conditions using NDT and task-specific training.",
+      "Neurorehabilitation for stroke, Parkinson's, and spinal cord conditions using NDT and task-specific training.",
     icon: Brain,
     color: "teal",
   },
   {
     title: "Stroke Recovery",
     description:
-      "Comprehensive programs to restore mobility, coordination, and daily independence post-stroke — from acute to late-stage recovery.",
+      "Programs focused on mobility, coordination and daily independence after stroke, from the early to the later stages.",
     icon: Activity,
     color: "navy",
   },
@@ -88,14 +88,14 @@ const specializedAreas = [
   {
     title: "Musculoskeletal Physiotherapy",
     description:
-      "Expert care for joint pain, sports injuries, back/neck pain, and arthritis using manual therapy and targeted exercises.",
+      "Care for joint pain, sports injuries, back/neck pain, and arthritis using manual therapy and targeted exercises.",
     icon: PersonStanding,
     color: "navy",
   },
   {
     title: "Post-Surgical Rehabilitation",
     description:
-      "Structured protocols for knee replacement, hip surgery, and other post-operative recovery to restore full function safely.",
+      "Structured plans for rehabilitation after knee replacement, hip surgery and other operations, following your surgeon's instructions.",
     icon: Scissors,
     color: "teal",
   },
@@ -115,32 +115,32 @@ const values = [
   {
     icon: Lightbulb,
     title: "Innovation",
-    description: "We continuously update our techniques and equipment to provide cutting-edge treatments.",
+    description: "We aim to keep our techniques and equipment up to date.",
   },
   {
     icon: Shield,
     title: "Trust & Safety",
-    description: "Our evidence-based approaches ensure safe, effective, and reliable treatment outcomes.",
+    description: "We aim to base our approaches on current evidence and to keep treatment safe.",
   },
 ];
 
 const facilityHighlights = [
   "Modern treatment rooms with privacy",
-  "Advanced electrotherapy equipment",
-  "Rehabilitation gym with latest machines",
+  "Electrotherapy equipment",
+  "Rehabilitation exercise area",
   "Comfortable patient waiting area",
   "Wheelchair accessible facilities",
   "Clean and hygienic environment",
-  "State-of-the-art diagnostic tools",
+  "Assessment and examination area",
   "Spacious exercise therapy area",
 ];
 
 const milestones = [
   { year: "2012", event: "Dr. Stella began her clinical practice, focusing on comprehensive physiotherapy care" },
-  { year: "2014", event: "Specialized in advanced neurological rehabilitation and stroke recovery protocols" },
+  { year: "2014", event: "Specialized in neurological rehabilitation, including stroke rehabilitation" },
   { year: "2018", event: "Expanded expertise to include structured paediatric CP early-intervention programmes" },
-  { year: "2022", event: "Reached the milestone of 5000+ successful patient recoveries in her career" },
-  { year: "2024", event: "Recognized for clinical excellence in musculoskeletal and sports rehabilitation" },
+  { year: "2022", event: "Reached the milestone of 5000+ patients treated in her career" },
+  { year: "2024", event: "Continued work in musculoskeletal and sports rehabilitation" },
   {
     year: "2025",
     event: "Crossed 8000+ patients treated across various physiotherapy specializations",
@@ -152,7 +152,7 @@ const milestones = [
 ];
 
 const storyStats = [
-  { icon: Award, value: "14+", label: "Years of Excellence", bg: "bg-teal-50", gradient: "gradient-teal" },
+  { icon: Award, value: "14+", label: "Years of Experience", bg: "bg-teal-50", gradient: "gradient-teal" },
   { icon: Users, value: "8000+", label: "Patients Treated", bg: "bg-navy-50", gradient: "gradient-navy" },
   { icon: Stethoscope, value: "15+", label: "Specialised Services", bg: "bg-navy-50", gradient: "gradient-navy" },
   { icon: ThumbsUp, value: "5.0★", label: "Google Rating", bg: "bg-teal-50", gradient: "gradient-teal" },
@@ -201,21 +201,21 @@ export function AboutContent() {
                 Our Story
               </span>
               <h2 className="font-heading text-3xl font-bold text-navy-900 mb-6">
-                A Legacy of Healing Excellence
+                Our Story
               </h2>
               <p className="text-navy-700 leading-relaxed mb-5">
                 Established in 2026, Sharon Physiotherapy & Rehabilitation Center was founded with a simple yet powerful
-                vision: to provide world-class physiotherapy services that make a real difference in
-                people&apos;s lives in Madurai.
+                vision: to provide high-quality physiotherapy that supports people in Madurai
+                with their own goals.
               </p>
               <p className="text-navy-700 leading-relaxed mb-5">
                 Our founder, Dr. T. Stella Thangam, MPT - Neurology, brings over 14 years of dedicated clinical experience to the center.
-                She envisioned a place where patients receive not just treatment, but comprehensive care that addresses
-                their physical, emotional, and psychological needs.
+                She envisioned a place where patients receive not just treatment, but care that considers
+                their physical and emotional needs.
               </p>
               <p className="text-navy-700 leading-relaxed">
-                Throughout her career, she has proudly helped over 8000 patients regain their mobility, independence,
-                and quality of life through expert, compassionate physiotherapy.
+                Throughout her career, she has treated over 8000 patients, working with them on their mobility,
+                independence and quality of life.
               </p>
             </motion.div>
 
@@ -284,9 +284,9 @@ export function AboutContent() {
                     {[
                       "14+ Years Clinical Experience",
                       "MPT – Neurology Specialization",
-                      "Stroke Rehabilitation Expert",
-                      "Cerebral Palsy Specialist",
-                      "Orthopedic & Pediatric Rehab",
+                      "Stroke rehabilitation experience",
+                      "Cerebral palsy management",
+                      "Orthopedic & pediatric rehab",
                     ].map((point) => (
                       <div key={point} className="flex items-center gap-2.5">
                         <div className="w-2 h-2 rounded-full bg-teal-500 shrink-0" />
@@ -301,9 +301,9 @@ export function AboutContent() {
             {/* Doctor bio */}
             <motion.div {...fadeUp} transition={{ delay: 0.2, duration: 0.6 }}>
               <p className="text-navy-700 leading-relaxed text-lg mb-8">
-                With over 14 years of dedicated experience, Dr. Stella has become one of Madurai&apos;s
-                most trusted physiotherapists. Her passion for helping patients regain their independence
-                and quality of life drives her commitment to excellence in every treatment.
+                With over 14 years of dedicated experience, Dr. Stella has treated patients across a
+                wide range of conditions. Her aim is to help each patient work towards their own goals for
+                independence and quality of life.
               </p>
 
               <div className="mb-8">
@@ -411,8 +411,8 @@ export function AboutContent() {
               Specialized Treatments
             </h2>
             <p className="text-navy-700 leading-relaxed">
-              Our clinic specializes in complex conditions requiring expert, focused clinical attention
-              and evidence-based rehabilitation protocols.
+              Our clinic works with complex conditions that need focused clinical attention
+              and carefully planned rehabilitation.
             </p>
           </motion.div>
 
@@ -467,7 +467,7 @@ export function AboutContent() {
             </h2>
             <p className="text-navy-700 leading-relaxed">
               Our core values shape every aspect of our practice, from patient interaction to
-              treatment protocols — ensuring a consistently exceptional experience.
+              treatment plans, so your experience is consistent.
             </p>
           </motion.div>
 

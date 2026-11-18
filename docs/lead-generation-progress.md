@@ -89,3 +89,20 @@ Saved GA4 URL-query redaction for name, phone, mobile, email, message and text; 
 - Written to make no outcome claims, guarantees or timelines. **Clinician review is still required before upload**, especially: the safety wording on each page, the list of women's-health concerns (copied from the existing services page), and the statement on the cerebral palsy page that Dr. T. Stella Thangam holds an MPT in Neurology.
 - Not done / needs the clinic: confirm whether home visits are offered (a Search Console query asked for "physiotherapy near me home service") before any home-visit page; Tamil pages need a qualified Tamil reviewer; no QR/referral print materials have been produced.
 - Existing wording on the services hub predates this work and should be softened by the clinician: "lasting relief", "rapid pain relief", "produces the most significant long-term gains", and per-service duration ranges (for example "4–8 weeks"). Outcome claims in healthcare advertising can breach Indian advertising rules.
+
+## Outcome-claim softening — 18 November 2026
+
+Changed (clinic-authored wording only):
+- Sitewide metadata, footer and home hero: removed "Premium", "Expert", "Advanced", "State-of-the-art", "best physiotherapist" and "regain" promises; descriptions now say the clinic is in Anaiyur, Madurai and offers assessment-led care.
+- Services hub and home treatment cards: removed "lasting relief", "rapid pain relief", "restore peak performance", "produces the most significant long-term gains", "root cause" and "proven track record of successful recoveries"; replaced the per-service duration ranges (for example "4–8 weeks") with "Based on your assessment".
+- Home "Transformation Through Rehabilitation" section: the two named patient cases ("90% mobility", "100% joint stability", "complete recovery") were replaced with generic goal examples labelled "Example only", plus the sentence "we cannot promise a particular result".
+- About page: removed "world-class", "most trusted", "Excellence", "cutting-edge", "regain"; "Specialist/Expert" titles are now "Experience in …"; "5000+ successful patient recoveries" is now "5000+ patients treated"; the unsourced "Recognized for clinical excellence" milestone was neutralised; facility labels lost superlatives.
+- FAQ: removed session counts ("6-8", "12-16+") and "addresses the root cause".
+- Blog: the stroke, back-pain and cerebral palsy posts no longer claim that most people regain function, that exercises are "safe for the majority", that early therapy "changes a child's lifetime trajectory", or that the clinic uses functional electrical stimulation (it is not in the clinic's listed treatments).
+
+Not changed, needs a clinic decision:
+- Patient testimonials (src/lib/utils.ts) are quotes with recovery statements (one even says "state-of-the-art equipment"). They cannot be edited. Keep them only if each patient gave written permission and the clinic can show they are genuine; otherwise remove them. Healthcare advertising rules may restrict testimonials; take advice.
+- The "8000+ patients treated" figure (hero, about, services hub) and "5000+" milestone are unconfirmed; only "14+ years" was confirmed by the clinic.
+- The FAQ states the clinic offers limited home visits; not confirmed.
+- The neurological conditions list (including ADHD, Autism, Dementia, multiple sclerosis) is a scope claim the clinician should confirm.
+- Facility labels on the about page ("Rehabilitation exercise area", "Assessment and examination area", "Electrotherapy equipment") were stripped of superlatives but not verified against the real clinic.

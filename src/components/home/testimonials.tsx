@@ -24,7 +24,7 @@ export function Testimonials() {
             What Our Patients Say
           </h2>
           <p className="text-navy-700 leading-relaxed">
-            Real experiences from patients who have transformed their lives through our physiotherapy services.
+            Experiences shared by patients about their care at the clinic.
           </p>
         </motion.div>
 

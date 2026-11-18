@@ -35,8 +35,8 @@ export const metadata: Metadata = {
     default: "Physiotherapy in Anaiyur, Madurai | Sharon Physiotherapy",
     template: "%s | Sharon Physiotherapy Madurai",
   },
-  description: "Premium physiotherapy clinic in Madurai specializing in neurological and orthopedic rehabilitation. Expert care for stroke, sports injuries, joint pain, and more.",
-  keywords: ["physiotherapy Madurai", "rehabilitation center Madurai", "stroke rehabilitation", "sports injury physiotherapy", "orthopedic physiotherapy", "best physiotherapist Madurai"],
+  description: "Physiotherapy clinic in Anaiyur, Madurai specializing in neurological and orthopedic rehabilitation, with assessment-led care for stroke, sports injuries, joint pain and more.",
+  keywords: ["physiotherapy Madurai", "rehabilitation center Madurai", "stroke rehabilitation", "sports injury physiotherapy", "orthopedic physiotherapy", "physiotherapist in Madurai"],
   authors: [{ name: "Sharon Physiotherapy" }],
   alternates: {
     canonical: "/",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     url: "/",
     siteName: "Sharon Physiotherapy",
     title: "Sharon Physiotherapy & Rehabilitation Center | Madurai",
-    description: "Premium physiotherapy clinic in Madurai specializing in neurological and orthopedic rehabilitation.",
+    description: "Physiotherapy clinic in Anaiyur, Madurai specializing in neurological and orthopedic rehabilitation.",
     images: [
       {
         url: "/opengraph-image",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Sharon Physiotherapy & Rehabilitation Center",
-    description: "Premium physiotherapy clinic in Madurai specializing in neurological and orthopedic rehabilitation.",
+    description: "Physiotherapy clinic in Anaiyur, Madurai specializing in neurological and orthopedic rehabilitation.",
     images: ["/opengraph-image"],
   },
   robots: {

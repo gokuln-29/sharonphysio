@@ -10,7 +10,7 @@ const resolvedUrl = (process.env.NEXT_PUBLIC_SITE_URL || fallbackUrl).replace(/\
 
 export const siteConfig = {
   name: "Sharon Physiotherapy & Rehabilitation Center",
-  description: "Premium physiotherapy clinic in Madurai specializing in neurological and orthopedic rehabilitation",
+  description: "Physiotherapy clinic in Anaiyur, Madurai specializing in neurological and orthopedic rehabilitation",
   url: resolvedUrl,
   founded: 2026,
   phone: "+91 82483 05206",
@@ -49,25 +49,25 @@ export const navigation = [
 export const treatments = [
   {
     title: "Stroke Rehabilitation",
-    description: "Comprehensive neurorehabilitation program for stroke recovery, focusing on motor function and independence.",
+    description: "Neurological rehabilitation after stroke, focusing on movement, balance and everyday independence.",
     icon: "Brain",
     href: "/services/stroke-rehabilitation/",
   },
   {
     title: "Sports Injury Rehab",
-    description: "Expert sports physiotherapy ensuring safe return to sport with customized rehabilitation protocols.",
+    description: "Sports physiotherapy planned around your sport and your injury.",
     icon: "Activity",
     href: "/services/sports-injury-rehabilitation/",
   },
   {
     title: "Cerebral Palsy Management",
-    description: "Specialized pediatric physiotherapy for children with CP to improve motor development and function.",
+    description: "Pediatric physiotherapy for children with cerebral palsy, focused on movement and everyday activities.",
     icon: "Baby",
     href: "/services/cerebral-palsy-management/",
   },
   {
     title: "Back & Neck Pain",
-    description: "Targeted treatment for chronic back pain, herniated discs, and cervical issues.",
+    description: "Physiotherapy for back and neck pain, including disc and cervical problems.",
     icon: "PersonStanding",
     href: "/services/back-neck-pain/",
   },
@@ -79,7 +79,7 @@ export const treatments = [
   },
   {
     title: "Manual Therapy",
-    description: "Hands-on techniques to mobilize joints and soft tissues for pain relief and improved mobility.",
+    description: "Hands-on techniques applied to joints and soft tissues, usually alongside exercise.",
     icon: "Hand",
     href: "/services/manual-therapy/",
   },
@@ -143,7 +143,7 @@ export const testimonials = [
 export const faqs = [
   {
     question: "What conditions do you treat at Sharon Physiotherapy?",
-    answer: "We specialize in treating neurological conditions (stroke, Parkinson's, spinal cord injury, multiple sclerosis) and orthopedic conditions (sports injuries, joint replacements, back/neck pain, arthritis). Our comprehensive approach addresses the root cause of your problem.",
+    answer: "We specialize in treating neurological conditions (stroke, Parkinson's, spinal cord injury, multiple sclerosis) and orthopedic conditions (sports injuries, joint replacements, back/neck pain, arthritis). Your physiotherapist will explain what they find at your assessment and what may help.",
   },
   {
     question: "Do I need a doctor's referral to visit?",
@@ -155,7 +155,7 @@ export const faqs = [
   },
   {
     question: "How many sessions will I need?",
-    answer: "The number of sessions varies based on your condition, severity, and individual progress. Acute conditions may require 6-8 sessions, while chronic or post-surgical cases may need 12-16+ sessions. We'll provide an estimated treatment plan after your assessment.",
+    answer: "The number of sessions varies based on your condition, how long you have had it, and how you progress. We will discuss a plan and review it with you after your assessment.",
   },
   {
     question: "Do you offer home visit services?",
@@ -319,7 +319,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     title: "Understanding Stroke Rehabilitation",
-    excerpt: "Learn about the critical window for stroke recovery and the role of neuroplasticity in regaining mobility.",
+    excerpt: "What stroke rehabilitation involves, and why starting a plan with your care team early can matter.",
     date: "May 5, 2024",
     isoDate: "2024-05-05",
     image: "/blog/stroke-rehab.jpg",
@@ -327,25 +327,25 @@ export const blogPosts: BlogPost[] = [
     readingMinutes: 6,
     content: [
       {
-        body: "A stroke can change life in minutes — but recovery is rarely all-or-nothing. With the right rehabilitation programme, most people regain meaningful function in the weeks and months that follow. The earlier focused therapy starts, the better the outcome tends to be.",
+        body: "A stroke can change life in minutes, and recovery looks different for every person. Rehabilitation is planned around your own goals and your doctor's advice. Many people are encouraged to start rehabilitation early once they are medically stable, but when and how depends on your care team.",
       },
       {
-        heading: "Why the first 90 days matter",
-        body: "The brain is most receptive to relearning movement and language during the first three months after a stroke. This is when neuroplasticity — the brain's ability to rewire itself around damaged tissue — is at its peak. Intensive, task-specific physiotherapy during this window helps patients re-form the neural pathways for walking, dressing, eating, and speaking.",
+        heading: "Why timing matters",
+        body: "Research suggests the brain is especially adaptable in the first weeks and months after a stroke, a process often called neuroplasticity. Rehabilitation during this period commonly involves repeated, task-specific practice of everyday movements such as walking, dressing and eating. How much recovery any person makes varies widely, and your doctor can advise you on what to expect.",
       },
       {
         heading: "What a rehab programme looks like",
-        body: "At Sharon Physiotherapy we combine neurodevelopmental treatment (NDT), task-specific gait and balance training, functional electrical stimulation, and graded strength work. Family education is part of every session, because home practice between visits is what compounds the gains.",
+        body: "A plan may include task-specific gait and balance training and graded strength work, depending on your assessment. Family members are often involved, because practice between visits can support your plan.",
       },
       {
-        heading: "Recovery beyond 6 months",
-        body: "Even patients who started rehab late, or who have plateaued, can keep improving with the right plan. We routinely see new wins in patients a year or two post-stroke when therapy targets specific functional goals — climbing stairs, returning to work, gripping a spoon — rather than generic exercises.",
+        heading: "Rehabilitation beyond the first months",
+        body: "Some people continue to work on specific goals long after the first months, such as climbing stairs, returning to work or gripping a spoon. If you have already finished a period of rehabilitation, you can ask a physiotherapist whether a new assessment with specific goals would be useful.",
       },
     ],
   },
   {
     title: "Top 5 Exercises for Chronic Back Pain",
-    excerpt: "Simple yet effective exercises you can do at home to alleviate back pain and strengthen your core.",
+    excerpt: "Five gentle movements often suggested for back stiffness, with guidance on when to stop and when to get an assessment.",
     date: "April 28, 2024",
     isoDate: "2024-04-28",
     image: "/blog/back-pain.jpg",
@@ -353,27 +353,27 @@ export const blogPosts: BlogPost[] = [
     readingMinutes: 5,
     content: [
       {
-        body: "Most chronic low-back pain is mechanical — meaning it improves with movement, not bed rest. The exercises below are safe for the majority of people but stop and call us if anything worsens pain or causes numbness or tingling down the legs.",
+        body: "Many people with long-lasting low-back pain are advised to stay gently active rather than rest in bed, but this does not suit everyone. The movements below may suit some people and not others. Stop if anything worsens your pain or causes numbness or tingling down the legs, and ask a physiotherapist before starting if you are unsure.",
       },
       {
         heading: "1. Cat–Cow",
-        body: "On hands and knees, alternate between rounding the spine up (cat) and dropping the belly down (cow) for 10 slow reps. Mobilises the entire spine and reduces stiffness.",
+        body: "On hands and knees, alternate between rounding the spine up (cat) and dropping the belly down (cow) for 10 slow reps. A gentle way to move the spine.",
       },
       {
         heading: "2. Glute Bridge",
-        body: "Lying on your back with knees bent, lift your hips until shoulders, hips and knees are in a line. Hold for 3 seconds, repeat 12 times. Activates the glutes, which often switch off in people who sit a lot.",
+        body: "Lying on your back with knees bent, lift your hips until shoulders, hips and knees are in a line. Hold for 3 seconds, repeat 12 times. Works the buttock muscles, which can get less use if you sit for long periods.",
       },
       {
         heading: "3. Bird-Dog",
-        body: "From hands and knees, extend the opposite arm and leg, holding for 5 seconds. 8 reps each side. Trains deep core stability without compressing the disc.",
+        body: "From hands and knees, extend the opposite arm and leg, holding for 5 seconds. 8 reps each side. Works the trunk muscles that support the spine.",
       },
       {
         heading: "4. McKenzie Press-Up",
-        body: "Lying face down, gently press up onto the elbows or palms, keeping the hips on the floor. 10 slow reps. Great for disc-related pain that eases with backward bending.",
+        body: "Lying face down, gently press up onto the elbows or palms, keeping the hips on the floor. 10 slow reps. Some people find backward bending eases their pain, while for others it makes it worse. If it increases your pain or sends pain down a leg, stop and ask a physiotherapist.",
       },
       {
         heading: "5. Hip Flexor Stretch",
-        body: "Half-kneeling, push the hips forward to open the front of the back leg. Hold 30 seconds each side. Tight hip flexors silently overload the lumbar spine all day.",
+        body: "Half-kneeling, push the hips forward to open the front of the back leg. Hold 30 seconds each side. Tightness at the front of the hip can contribute to back discomfort in some people.",
       },
       {
         heading: "When to come in",
@@ -383,7 +383,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     title: "The Importance of Early Intervention in Cerebral Palsy",
-    excerpt: "How early physiotherapy can significantly improve developmental outcomes for children with CP.",
+    excerpt: "Why it helps to raise concerns about a child's development early, and what a physiotherapy assessment involves.",
     date: "April 15, 2024",
     isoDate: "2024-04-15",
     image: "/blog/cp-intervention.jpg",
@@ -391,11 +391,11 @@ export const blogPosts: BlogPost[] = [
     readingMinutes: 7,
     content: [
       {
-        body: "Cerebral palsy (CP) is the most common motor disability in children, but the diagnosis says less about a child's future than the quality of early therapy does. Brains under two are remarkably plastic, and structured input during this period can change a child's lifetime trajectory.",
+        body: "Cerebral palsy (CP) is a group of conditions affecting movement and posture, and is among the more common motor disabilities in childhood. Every child is different, and what physiotherapy can achieve varies from child to child. Raising concerns early lets your child's doctors and therapists assess them and plan support sooner.",
       },
       {
         heading: "What 'early' means",
-        body: "Specialists can now identify infants at high risk of CP from around 3–5 months of age using the Hammersmith Infant Neurological Examination and General Movements Assessment. Waiting for a formal diagnosis at 18–24 months wastes the most plastic period of brain development.",
+        body: "Trained specialists can identify some infants at higher risk of CP in the first months of life, using tools such as the General Movements Assessment and the Hammersmith Infant Neurological Examination, usually through a pediatric or neurology service. If you are worried, you do not have to wait for a formal diagnosis before asking for an assessment.",
       },
       {
         heading: "What we do",
@@ -403,11 +403,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         heading: "Goals at every stage",
-        body: "For infants we focus on midline orientation, head and trunk control, and reaching. As the child grows, we shift to gross motor milestones, gait, and skills that support school participation. Parents are partners — most progress happens at home, not in the clinic.",
+        body: "For infants we focus on midline orientation, head and trunk control, and reaching. As the child grows, we shift to gross motor milestones, gait, and skills that support school participation. Parents are partners: practice at home between visits is usually an important part of a plan.",
       },
       {
         heading: "Coming to clinic",
-        body: "If you have any concern about a child's development — late head control, persistent fisting, asymmetric movement — please bring them in for an assessment. A 30-minute visit can change years of outcome.",
+        body: "If you have any concern about a child's development — late head control, persistent fisting, asymmetric movement — please bring them in for an assessment. An assessment can help you understand what to do next.",
       },
     ],
   },

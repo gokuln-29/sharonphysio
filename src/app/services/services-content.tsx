@@ -27,7 +27,7 @@ const treatmentDetails = [
     title: "Stroke Rehabilitation",
     category: "Neurological",
     description:
-      "Our comprehensive stroke rehabilitation program focuses on restoring motor function, balance, and independence through evidence-based techniques and intensive therapy. We leverage neuroplasticity — the brain's remarkable ability to reorganize — to rebuild movement and communication pathways.",
+      "Our stroke rehabilitation program focuses on movement, balance and everyday independence. Your plan is based on your assessment and may include practice of everyday tasks, balance and walking training, and exercises matched to your current mobility.",
     conditions: ["Hemiparesis", "Balance disorders", "Motor dysfunction", "Post-stroke mobility issues"],
     techniques: [
       "Neurodevelopmental treatment (NDT)",
@@ -35,7 +35,7 @@ const treatmentDetails = [
       "Functional electrical stimulation",
       "Gait & balance retraining",
     ],
-    duration: "8–16 weeks",
+    duration: "Based on your assessment",
     color: "teal",
   },
   {
@@ -44,7 +44,7 @@ const treatmentDetails = [
     title: "Sports Injury Rehabilitation",
     category: "Orthopedic",
     description:
-      "Expert sports physiotherapy ensuring safe return to sport with customized rehabilitation protocols for athletes and active individuals. We combine biomechanical assessment with sport-specific training to restore peak performance and prevent re-injury.",
+      "Sports physiotherapy for athletes and active people, with rehabilitation planned around your sport and your injury. We combine a movement assessment with sport-specific exercises, working with your doctor or surgeon where needed.",
     conditions: ["ACL injuries", "Rotator cuff tears", "Ankle sprains", "Tennis elbow"],
     techniques: [
       "Sports-specific exercises",
@@ -53,7 +53,7 @@ const treatmentDetails = [
       "Return-to-sport testing",
       "Cupping and soft tissue manipulation",
     ],
-    duration: "6–12 weeks",
+    duration: "Based on your assessment",
     color: "navy",
   },
   {
@@ -62,7 +62,7 @@ const treatmentDetails = [
     title: "Cerebral Palsy Management",
     category: "Pediatric / Neuro",
     description:
-      "Specialized pediatric rehabilitation for children with Cerebral Palsy, focusing on motor development, posture, and functional mobility. Early intervention during critical developmental windows produces the most significant long-term gains.",
+      "Pediatric physiotherapy for children with Cerebral Palsy, focusing on movement, posture and everyday activities. If you have concerns about your child's development, talk to your pediatrician and ask the clinic about an assessment.",
     conditions: ["Spastic CP", "Ataxic CP", "Motor developmental delay", "Pediatric gait issues"],
     techniques: [
       "Early intervention",
@@ -70,7 +70,7 @@ const treatmentDetails = [
       "Assistive device training",
       "Parent coaching & education",
     ],
-    duration: "Long-term / Ongoing",
+    duration: "Based on your assessment",
     color: "teal",
   },
   {
@@ -79,7 +79,7 @@ const treatmentDetails = [
     title: "Back & Neck Pain Treatment",
     category: "Orthopedic",
     description:
-      "Targeted treatment for chronic back pain, herniated discs, and cervical issues using advanced manual therapy and stabilization exercises. We identify the root cause rather than only treating symptoms, delivering lasting relief.",
+      "Physiotherapy for back and neck problems, including manual therapy and stabilization exercises, based on your assessment. Your physiotherapist will explain what they find and what may help.",
     conditions: ["Chronic back pain", "Herniated disc", "Cervical spondylosis", "Sciatica"],
     techniques: [
       "Manual therapy",
@@ -87,7 +87,7 @@ const treatmentDetails = [
       "Dry needling",
       "Posture correction",
     ],
-    duration: "4–8 weeks",
+    duration: "Based on your assessment",
     color: "navy",
   },
   {
@@ -96,7 +96,7 @@ const treatmentDetails = [
     title: "Women's Fitness Care",
     category: "Women's Health",
     description:
-      "Specialized physiotherapy for women's health needs, including prenatal, postnatal, and overall physical wellness. We provide a safe, supportive environment for women at every stage of life.",
+      "Specialized physiotherapy for women's health needs, including prenatal, postnatal, and overall physical wellness. We aim to provide a supportive setting for women at every stage of life.",
     conditions: [
       "Pelvic floor dysfunction",
       "Prenatal discomfort",
@@ -112,16 +112,16 @@ const treatmentDetails = [
       "Core strengthening",
       "Wellness counseling",
     ],
-    duration: "4–12 weeks",
+    duration: "Based on your assessment",
     color: "teal",
   },
   {
     id: "manual",
     icon: Hand,
-    title: "Manual Therapy & Advanced Techniques",
+    title: "Manual Therapy & Other Techniques",
     category: "Specialized Techniques",
     description:
-      "Hands-on joint and soft tissue mobilization combined with advanced modalities like Electrotherapy, Dry Needling, and Craniosacral therapy. These techniques provide rapid pain relief and improved mobility when used alongside active rehabilitation.",
+      "Hands-on joint and soft tissue mobilization, with modalities such as Electrotherapy, Dry Needling and Craniosacral therapy. These techniques may be used alongside active rehabilitation; which ones suit you depends on your assessment.",
     conditions: ["Joint stiffness", "Muscle tension", "Chronic pain", "Post-surgical stiffness"],
     techniques: [
       "Joint mobilization",
@@ -130,7 +130,7 @@ const treatmentDetails = [
       "Craniosacral therapy",
       "PNF techniques",
     ],
-    duration: "Based on assessment",
+    duration: "Based on your assessment",
     color: "navy",
   },
 ];
@@ -144,12 +144,12 @@ const whyUs = [
   {
     icon: BookOpen,
     title: "Evidence-Based Practice",
-    description: "Every treatment protocol is grounded in current clinical research and internationally recognized guidelines.",
+    description: "Treatment is planned from your assessment and guided by current clinical practice.",
   },
   {
     icon: Users,
     title: "8000+ Patients Treated",
-    description: "A proven track record of successful recoveries across a wide range of conditions and patient demographics.",
+    description: "Experience across a wide range of conditions and patient groups.",
   },
 ];
 
@@ -182,7 +182,7 @@ export function ServicesContent() {
             </h1>
             <p className="text-lg text-navy-700 leading-relaxed mb-8 max-w-2xl mx-auto">
               From neurological rehabilitation to orthopedic care and women&apos;s health, we provide
-              personalized, evidence-based treatments for optimal and lasting recovery.
+              personalized physiotherapy based on a careful assessment of your needs and goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact#book">

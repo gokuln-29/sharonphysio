@@ -34,7 +34,7 @@ export function Treatments() {
             Comprehensive Treatment Solutions
           </h2>
           <p className="text-navy-700 leading-relaxed">
-            We offer a wide range of specialized physiotherapy treatments tailored to your specific needs, ensuring optimal recovery and rehabilitation.
+            We offer a wide range of specialized physiotherapy treatments planned around your assessment and your goals.
           </p>
         </motion.div>
 

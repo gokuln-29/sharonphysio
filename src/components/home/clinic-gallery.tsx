@@ -20,7 +20,7 @@ export function ClinicGallery() {
             A Healing Environment
           </h2>
           <p className="text-navy-600 mt-4 max-w-xl mx-auto">
-            Our modern clinic is equipped with advanced rehabilitation tools in a calm, welcoming space designed for your recovery.
+            Our clinic has rehabilitation equipment and exercise space in a calm, welcoming setting.
           </p>
         </motion.div>
 
