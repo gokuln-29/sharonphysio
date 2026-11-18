@@ -2,8 +2,8 @@
 
 import { useEffect } from "react";
 
-type ContactEvent = "call_click" | "whatsapp_open" | "directions_click" | "appointment_click" | "appointment_form_start";
-const sources = ["link", "appointment_form", "hero", "header", "footer", "mobile_bar", "floating", "service", "location"] as const;
+type ContactEvent = "call_click" | "whatsapp_open" | "directions_click" | "appointment_click" | "appointment_form_start" | "callback_form_start" | "callback_request";
+const sources = ["link", "appointment_form", "callback_form", "hero", "header", "footer", "mobile_bar", "floating", "service", "location"] as const;
 type ContactSource = (typeof sources)[number];
 type AnalyticsWindow = Window & { gtag?: (...args: unknown[]) => void; dataLayer?: unknown[] };
 

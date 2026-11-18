@@ -7,6 +7,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { trackContactIntent } from "@/components/layout/contact-analytics";
+import { CallbackForm } from "@/components/contact/callback-form";
+import { callbackEndpoint } from "@/lib/callback";
 import { siteConfig } from "@/lib/utils";
 import { appointmentMessage, appointmentTreatments, clinicToday, validateAppointment, type Appointment } from "@/lib/appointment";
 
@@ -64,12 +66,14 @@ export default function ContactClient() {
           <div className="mt-6 flex flex-wrap gap-4" data-contact-source="hero">
             <a href={`tel:${siteConfig.phone.replace(/\s/g, "")}`} className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 font-semibold text-white"><Phone className="h-4 w-4" aria-hidden="true" />{siteConfig.phone}</a>
             <a href={siteConfig.googleMaps} target="_blank" rel="noopener noreferrer" data-contact-action="directions" className="inline-flex items-center gap-2 rounded-xl border border-primary px-5 py-3 font-semibold text-primary"><MapPin className="h-4 w-4" aria-hidden="true" />Get directions</a>
+            {callbackEndpoint && <a href="#callback" className="inline-flex items-center gap-2 rounded-xl border border-primary px-5 py-3 font-semibold text-primary"><Phone className="h-4 w-4" aria-hidden="true" />Request a callback</a>}
           </div>
         </div>
       </section>
       <section className="bg-white px-4 py-10 sm:py-16">
         <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-3">
-          <div className="rounded-2xl border border-teal-100 p-5 shadow-sm sm:p-8 lg:col-span-2">
+          <div className="lg:col-span-2">
+          <div className="rounded-2xl border border-teal-100 p-5 shadow-sm sm:p-8">
             <h2 id="book" className="scroll-mt-28 font-heading text-2xl font-bold text-navy-900">Request an appointment</h2>
             <p id="booking-help" className="mt-3 text-sm leading-relaxed text-navy-700">Only your name and mobile number are required. On the next screen, tap <strong>Send in WhatsApp</strong>. This is a request; your appointment is booked only when the clinic confirms it.</p>
             <form onSubmit={handleSubmit} noValidate aria-describedby="booking-help" className="mt-6 space-y-5">
@@ -88,6 +92,8 @@ export default function ContactClient() {
               <Button type="submit" size="lg" className="w-full"><Send className="mr-2 h-4 w-4" aria-hidden="true" />Continue to WhatsApp</Button>
               <p className="text-center text-sm text-navy-700">No WhatsApp? <a href={`tel:${siteConfig.phone.replace(/\s/g, "")}`} className="font-semibold text-primary underline">Call the clinic</a> or <a href={`mailto:${siteConfig.email}?subject=Appointment%20enquiry`} className="font-semibold text-primary underline">email an enquiry</a>.</p>
             </form>
+          </div>
+          <CallbackForm />
           </div>
           <aside className="space-y-6 text-navy-700">
             <div className="rounded-2xl bg-teal-50 p-6"><MapPin className="mb-3 h-6 w-6 text-primary" aria-hidden="true" /><h2 className="font-heading text-xl font-bold text-navy-900">Visit our clinic</h2><p className="mt-3 text-sm leading-relaxed">{siteConfig.address}</p><a href={siteConfig.googleMaps} target="_blank" rel="noopener noreferrer" data-contact-action="directions" data-contact-source="location" className="mt-4 inline-block font-semibold text-primary underline">Open Google Maps</a></div>
