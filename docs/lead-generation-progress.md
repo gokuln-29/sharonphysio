@@ -106,3 +106,10 @@ Not changed, needs a clinic decision:
 - The FAQ states the clinic offers limited home visits; not confirmed.
 - The neurological conditions list (including ADHD, Autism, Dementia, multiple sclerosis) is a scope claim the clinician should confirm.
 - Facility labels on the about page ("Rehabilitation exercise area", "Assessment and examination area", "Electrotherapy equipment") were stripped of superlatives but not verified against the real clinic.
+
+## Printed QR cards — 18 November 2026
+
+- Print-ready cards are in `docs/print/` (A6 patient and doctor-office cards, and a 10-up wallet-card sheet). Instructions, tracking and print checks are in `docs/print/README.md`.
+- Cards use short links (`/go/patient`, `/go/doctor`, `/go/wallet`) that redirect (302) to the contact page with a different `utm_campaign` each. They only work after the updated `.htaccess` is uploaded, so upload first, test the three links, then print one sheet and scan it with several phones before ordering a batch.
+- The same `.htaccess` change fixes an existing bug: missing pages returned HTTP 500 on the live site (a rewrite loop) instead of a 404.
+- Wording on the cards (services line, "Led by Dr. T. Stella Thangam, MPT (Neurology)") needs the clinician's approval before printing.

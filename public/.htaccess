@@ -79,6 +79,16 @@ AddDefaultCharset UTF-8
   RewriteRule ^treatments/?$ /services/ [R=301,L]
 
   # --------------------------------------------------------------------------
+  #  3b. Short links for printed QR cards. Temporary (302) so the destination
+  #      can change without reprinting. Each carries its own utm_campaign so
+  #      GA4 and the callback sheet can tell the cards apart.
+  #      See docs/print/README.md.
+  # --------------------------------------------------------------------------
+  RewriteRule ^go/patient/?$ https://sharonphysio.com/contact/?utm_source=qr&utm_medium=print&utm_campaign=patient_card [R=302,L]
+  RewriteRule ^go/doctor/?$ https://sharonphysio.com/contact/?utm_source=qr&utm_medium=print&utm_campaign=doctor_office [R=302,L]
+  RewriteRule ^go/wallet/?$ https://sharonphysio.com/contact/?utm_source=qr&utm_medium=print&utm_campaign=wallet_card [R=302,L]
+
+  # --------------------------------------------------------------------------
   #  4. Add a trailing slash to clean URLs (matches Next.js `trailingSlash: true`).
   #     Skip for real files, existing directories, and asset paths.
   # --------------------------------------------------------------------------
@@ -93,8 +103,12 @@ AddDefaultCharset UTF-8
   #     This is the routing core for a Next.js static export with
   #     `trailingSlash: true`.
   # --------------------------------------------------------------------------
+  #     Only when that index.html really exists: otherwise a missing page
+  #     rewrites to a missing file forever and the server answers 500
+  #     instead of the 404 page below.
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
   RewriteRule ^(.+?)/?$ /$1/index.html [L]
 </IfModule>
 
